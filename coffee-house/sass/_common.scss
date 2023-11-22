@@ -1,3 +1,32 @@
+/* Common */
+@mixin font($size: 16px, $weight: 600, $style: normal) {
+  font-family: var(--font);
+  font-size: $size;
+  font-style: $style;
+  font-weight: $weight;
+  font-feature-settings: "clig" off, "liga" off;
+}
+
 * {
   box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-light);
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
 }

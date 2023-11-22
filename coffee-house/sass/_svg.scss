@@ -1,0 +1,14 @@
+/* SVG */
+.path {
+  &--fill-accent {
+    fill: var(--text-accent);
+  }
+
+  &--fill-dark {
+    fill: var(--text-dark);
+  }
+
+  &--stroke-dark {
+    stroke: var(--text-dark);
+  }
+}

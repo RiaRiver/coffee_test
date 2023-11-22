@@ -1,0 +1,39 @@
+/* Header */
+.header {
+  &__container {
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+  }
+
+  &__logo {
+    flex-shrink: 0;
+  }
+
+  &__nav {
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+
+    &-menu {
+      display: flex;
+      gap: 40px;
+      margin: 0 auto;
+    }
+
+    &-link {
+      @include font();
+      line-height: 150%;
+      color: var(--text-dark);
+    }
+  }
+
+  &__page-link {
+    display: flex;
+    gap: 8px;
+
+    @include font();
+    line-height: 150%;
+    color: var(--text-dark);
+  }
+}
