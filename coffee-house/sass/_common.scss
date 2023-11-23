@@ -12,7 +12,17 @@
 }
 
 body {
+  @include font();
+  color: var(--text-dark);
   background-color: var(--color-light);
+}
+
+h1,
+h2,
+h3,
+p {
+  padding: 0;
+  margin: 0;
 }
 
 .list {
@@ -22,6 +32,7 @@ body {
 }
 
 .link {
+  color: var(--text-dark);
   text-decoration: none;
 }
 
@@ -29,4 +40,21 @@ body {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
+}
+
+.text-accent {
+  font-style: italic;
+  color: var(--text-accent);
+}
+
+.link-btn {
+  min-width: 200px;
+  padding: 20px;
+
+  @include font();
+  line-height: 150%; /* 24px */
+  color: var(--text-dark);
+  text-align: center;
+  background: var(--color-light);
+  border-radius: 100px;
 }

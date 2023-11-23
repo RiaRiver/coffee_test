@@ -1,0 +1,43 @@
+/* Enjoy */
+.enjoy {
+  &__container {
+    min-height: 644px;
+    padding: 0 40px;
+  }
+
+  &__background {
+    position: absolute;
+    inset: 0;
+    z-index: -10;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    object-fit: cover;
+  }
+
+  &__content {
+    position: relative;
+    padding: 100px;
+    color: var(--text-light);
+  }
+
+  &__text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: start;
+    max-width: 530px;
+  }
+
+  &__heading {
+    @include font(72px);
+    line-height: 76px;
+    color: var(--text-light);
+  }
+
+  &__text {
+    @include font(16px, 400);
+    line-height: 150%;
+    color: var(--text-light);
+  }
+}
