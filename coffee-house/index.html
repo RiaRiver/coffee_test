@@ -77,11 +77,110 @@
     </section>
     <!-- /.section enjoy -->
 
-    <section class="section favorite">
-      <div class="container"></div>
+    <section class="section favorite-coffee">
+      <div class="container favorite-coffee__container">
+        <h2 class="section__title">Choose your <span class="text-accent">favorite</span> coffee</h2>
+        <div class="slider">
+          <div class="slides-block">
+            <div class="slides">
+              <div class="slide">
+                <div class="product-card">
+                  <img src="assets/img/favorite-coffee/coffee-slider-1.png"
+                       alt=""
+                       class="product-card__img">
+                  <div class="product-card__text">
+                    <h3 class="product-card__title">S’mores Frappuccino</h3>
+                    <!-- /.product-card__title -->
+                    <p class="product-card__description">This new drink takes an&nbsp;espresso and mixes it&nbsp;with brown sugar and cinnamon before being
+                      topped
+                      with oat milk.</p>
+                    <!-- /.product-card__description -->
+                    <span class="product-card__price">$5.50</span>
+                    <!-- /.product-card__price -->
+                  </div>
+                  <!-- /.product-card__text -->
+                </div>
+                <!-- /.product-card -->
+              </div>
+              <!-- /.slide -->
+
+              <div class="slide">
+                <div class="product-card">
+                  <img src="assets/img/favorite-coffee/coffee-slider-2.png"
+                       alt=""
+                       class="product-card__img">
+                  <div class="product-card__text">
+                    <h3 class="product-card__title">Caramel Macchiato</h3>
+                    <!-- /.product-card__title -->
+                    <p class="product-card__description">Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick
+                      foam.</p>
+                    <!-- /.product-card__description -->
+                    <span class="product-card__price">$5.00</span>
+                    <!-- /.product-card__price -->
+                  </div>
+                  <!-- /.product-card__text -->
+                </div>
+                <!-- /.product-card -->
+              </div>
+              <!-- /.slide -->
+
+              <div class="slide">
+                <div class="product-card">
+                  <img src="assets/img/favorite-coffee/coffee-slider-3.png"
+                       alt=""
+                       class="product-card__img">
+                  <div class="product-card__text">
+                    <h3 class="product-card__title">Ice coffee</h3>
+                    <!-- /.product-card__title -->
+                    <p class="product-card__description">A&nbsp;popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.</p>
+                    <!-- /.product-card__description -->
+                    <span class="product-card__price">$4.50</span>
+                    <!-- /.product-card__price -->
+                  </div>
+                  <!-- /.product-card__text -->
+                </div>
+                <!-- /.product-card -->
+              </div>
+              <!-- /.slide -->
+            </div>
+            <!-- /.slides -->
+          </div>
+          <!-- /.slides-block -->
+
+          <button type="button"
+                  class="slider__btn slider__prev-btn"
+                  aria-label="Previous slide">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 class="icon arrow-icon"
+                 width="24"
+                 height="24">
+              <use href="#arrow-icon"></use>
+            </svg></button>
+          <button type="button"
+                  class="slider__btn slider__next-btn"
+                  aria-label="Next slide">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 class="icon arrow-icon"
+                 width="24"
+                 height="24">
+              <use href="#arrow-icon"></use>
+            </svg></button>
+
+          <div class="slider__pagination">
+            <div class="slider__pagination-bullet slider__pagination-bullet--active"></div>
+            <!-- /.slider__pagination-bullet -->
+            <div class="slider__pagination-bullet"></div>
+            <!-- /.slider__pagination-bullet -->
+            <div class="slider__pagination-bullet"></div>
+            <!-- /.slider__pagination-bullet -->
+          </div>
+          <!-- /.slider__pagination -->
+        </div>
+        <!-- /.slider -->
+      </div>
       <!-- /.container -->
     </section>
-    <!-- /.section favorite -->
+    <!-- /.section favorite-coffee -->
 
     <section class="section about">
       <div class="container"></div>
@@ -173,5 +272,19 @@
       </symbol>
     </defs>
   </svg>
+
+  <svg class="svg-symbols">
+    <defs>
+      <symbol id="arrow-icon"
+              viewBox="0 0 24 24">
+
+        <path class="arrow-icon-path"
+              d="M6 12H18.5M18.5 12L12.5 6M18.5 12L12.5 18"
+              stroke-linecap="round"
+              stroke-linejoin="round" />
+      </symbol>
+    </defs>
+  </svg>
+
 </body>
 </html>

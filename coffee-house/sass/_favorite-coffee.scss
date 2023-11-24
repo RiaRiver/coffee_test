@@ -1,0 +1,103 @@
+/* Favorite coffee */
+.favorite-coffee {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+.slider {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  padding: 0 4px;
+
+  &__btn {
+    display: flex;
+    flex-shrink: 1;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border: 1px solid var(--border-dark);
+    border-radius: 100px;
+  }
+
+  &__prev-btn {
+    order: -1;
+    transform: rotate(180deg);
+  }
+
+  &__pagination {
+    display: flex;
+    flex: 0 0 100%;
+    gap: 12px;
+    justify-content: center;
+
+    &-bullet {
+      width: 40px;
+      height: 4px;
+      background: var(--border-light);
+      border-radius: 100px;
+
+      /* stylelint-disable-next-line max-nesting-depth */
+      &--active {
+        background: var(--border-dark);
+      }
+    }
+  }
+}
+
+.slides-block {
+  flex-basis: 80%;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+}
+
+.slide {
+  flex-basis: 100%;
+  flex-shrink: 0;
+}
+
+.product-card {
+  max-width: 480px;
+  margin: 0 auto;
+
+  &__img {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+
+  &__title {
+    @include font(24px);
+    line-height: 125%;
+    color: var(--text-dark);
+    text-align: center;
+  }
+
+  &__description {
+    @include font(16px, 400);
+    line-height: 150%;
+    color: var(--text-dark);
+    text-align: center;
+  }
+
+  &__price {
+    @include font(24px);
+    line-height: 125%;
+    color: var(--text-dark);
+    text-align: center;
+  }
+}
