@@ -1,0 +1,56 @@
+/* About */
+.about {
+  $radius: 20px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__description {
+    @include font(60px);
+    line-height: 125%;
+    color: var(--text-dark);
+    letter-spacing: -0.1px; /* For Pixel Perfect */
+  }
+
+  &__images {
+    display: grid;
+    grid-template: auto auto auto / 1fr 1fr;
+    gap: 40px;
+  }
+
+  &__image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 660px;
+    overflow: hidden;
+    border-radius: $radius;
+
+    &:first-child {
+      grid-row: 1 / span 2;
+      max-height: 590px;
+    }
+
+    &:last-child {
+      grid-row: 2 / span 2;
+      max-height: 590px;
+    }
+
+    &:nth-child(2) {
+      max-height: 430px;
+    }
+
+    &:nth-child(3) {
+      max-height: 430px;
+    }
+  }
+
+  &__image {
+    border-radius: $radius;
+    transition: 0.5s;
+    transform: scale(1.1);
+  }
+}

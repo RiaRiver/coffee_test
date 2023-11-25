@@ -21,7 +21,8 @@ h1,
 h2,
 h3,
 p,
-button {
+button,
+figure {
   padding: 0;
   margin: 0;
   background: none;
@@ -60,6 +61,7 @@ img {
 .text-accent {
   font-style: italic;
   color: var(--text-accent);
+  letter-spacing: 0; /* For Pixel Perfect */
 }
 
 .link-btn {

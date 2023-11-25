@@ -44,7 +44,8 @@ h1,
 h2,
 h3,
 p,
-button {
+button,
+figure {
   padding: 0;
   margin: 0;
   background: none;
@@ -83,6 +84,7 @@ img {
 .text-accent {
   font-style: italic;
   color: var(--text-accent);
+  letter-spacing: 0; /* For Pixel Perfect */
 }
 
 .link-btn {
@@ -318,4 +320,61 @@ img {
   line-height: 125%;
   color: var(--text-dark);
   text-align: center;
+}
+
+/* About */
+.about__container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.about__description {
+  font-family: var(--font);
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  font-feature-settings: "clig" off, "liga" off;
+  line-height: 125%;
+  color: var(--text-dark);
+  letter-spacing: -0.1px; /* For Pixel Perfect */
+}
+
+.about__images {
+  display: grid;
+  grid-template: auto auto auto/1fr 1fr;
+  gap: 40px;
+}
+
+.about__image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 660px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.about__image-wrapper:first-child {
+  grid-row: 1/span 2;
+  max-height: 590px;
+}
+
+.about__image-wrapper:last-child {
+  grid-row: 2/span 2;
+  max-height: 590px;
+}
+
+.about__image-wrapper:nth-child(2) {
+  max-height: 430px;
+}
+
+.about__image-wrapper:nth-child(3) {
+  max-height: 430px;
+}
+
+.about__image {
+  border-radius: 20px;
+  transition: 0.5s;
+  transform: scale(1.1);
 }
