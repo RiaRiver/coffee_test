@@ -3,9 +3,7 @@
   $radius: 20px;
 
   &__container {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+    @include flex(40px, column);
   }
 
   &__description {

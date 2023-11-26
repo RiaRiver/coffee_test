@@ -16,14 +16,13 @@
     align-items: center;
 
     &-menu {
-      display: flex;
-      gap: 40px;
+      @include flex(40px);
+
       margin: 0 auto;
     }
   }
 
   &__page-link {
-    display: flex;
-    gap: 8px;
+    @include flex(8px);
   }
 }

@@ -7,6 +7,15 @@
   line-height: $lh;
 }
 
+@mixin flex ($gap: null, $dir: row ) {
+  display: flex;
+  flex-direction: $dir;
+
+  @if $gap {
+    gap: $gap;
+  }
+}
+
 @mixin round-btn($brd-color) {
   display: flex;
   align-items: center;

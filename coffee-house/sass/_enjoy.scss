@@ -22,9 +22,8 @@
   }
 
   &__text-block {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+    @include flex(40px,column);
+
     align-items: start;
     max-width: 530px;
   }

@@ -1,8 +1,8 @@
 /* Mobile App */
 .mobile-app {
   &__container {
-    display: flex;
-    gap: 100px;
+    @include flex(100px);
+
     align-items: center;
 
     & > * {
@@ -11,9 +11,7 @@
   }
 
   &__text-block {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+    @include flex(40px, column);
   }
 
   &__title {
@@ -21,22 +19,20 @@
   }
 
   &__link-buttons {
-    display: flex;
-    gap: 20px;
+    @include flex(20px);
   }
 
   &__link-btn {
-    display: flex;
-    gap: 8px;
+    @include flex(8px);
+
     align-items: center;
     padding: 11px 19px;
     border: 1px solid var(--border-dark);
   }
 
   &__btn-text {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
+    @include flex(2px, column);
+
     text-align-last: left;
 
     & span:first-child {

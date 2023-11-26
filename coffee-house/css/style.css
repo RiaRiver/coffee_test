@@ -190,12 +190,14 @@ img {
 
 .header__nav-menu {
   display: flex;
+  flex-direction: row;
   gap: 40px;
   margin: 0 auto;
 }
 
 .header__page-link {
   display: flex;
+  flex-direction: row;
   gap: 8px;
 }
 
@@ -243,6 +245,7 @@ img {
 
 .slider {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   gap: 40px;
   align-items: center;
@@ -268,6 +271,7 @@ img {
 .slider__pagination {
   display: flex;
   flex: 0 0 100%;
+  flex-direction: row;
   gap: 12px;
   justify-content: center;
 }
@@ -369,6 +373,7 @@ img {
 /* Mobile App */
 .mobile-app__container {
   display: flex;
+  flex-direction: row;
   gap: 100px;
   align-items: center;
 }
@@ -389,11 +394,13 @@ img {
 
 .mobile-app__link-buttons {
   display: flex;
+  flex-direction: row;
   gap: 20px;
 }
 
 .mobile-app__link-btn {
   display: flex;
+  flex-direction: row;
   gap: 8px;
   align-items: center;
   padding: 11px 19px;
@@ -420,6 +427,7 @@ img {
 
 .footer__content {
   display: flex;
+  flex-direction: row;
   gap: 100px;
   align-items: center;
   padding: 100px;
@@ -444,6 +452,7 @@ img {
 
 .social-links {
   display: flex;
+  flex-direction: row;
   gap: 12px;
 }
 
@@ -469,6 +478,7 @@ img {
 
 .contacts__link {
   display: flex;
+  flex-direction: row;
   gap: 8px;
   color: var(--text-light);
 }

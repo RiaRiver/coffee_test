@@ -3,8 +3,8 @@
   margin: auto 0 40px;
 
   &__content {
-    display: flex;
-    gap: 100px;
+    @include flex(100px);
+
     align-items: center;
     padding: 100px;
     background: var(--color-dark);
@@ -16,9 +16,7 @@
   }
 
   &__block {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+    @include flex(40px, column);
   }
 
   &__title {
@@ -28,8 +26,7 @@
 }
 
 .social-links {
-  display: flex;
-  gap: 12px;
+  @include flex(12px);
 
   &__link {
     @include round-btn(--border-light);
@@ -42,14 +39,12 @@
   }
 
   &__list {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+    @include flex(16px, column);
   }
 
   &__link {
-    display: flex;
-    gap: 8px;
+    @include flex(8px);
+
     color: var(--text-light);
   }
 }

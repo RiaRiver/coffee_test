@@ -1,16 +1,14 @@
 /* Favorite coffee */
 .favorite-coffee {
   &__container {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+    @include flex(40px, column);
   }
 }
 
 .slider {
-  display: flex;
+  @include flex(40px);
+
   flex-wrap: wrap;
-  gap: 40px;
   align-items: center;
   padding: 0 4px;
 
@@ -25,9 +23,9 @@
   }
 
   &__pagination {
-    display: flex;
+    @include flex(12px);
+
     flex: 0 0 100%;
-    gap: 12px;
     justify-content: center;
 
     &-bullet {
@@ -68,9 +66,8 @@
   }
 
   &__text {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+    @include flex(16px, column);
+
     align-items: center;
     text-align: center;
   }
