@@ -9,6 +9,78 @@
   --font: "Inter", sans-serif;
 }
 
+/* Typography */
+.heading-1 {
+  font-family: var(--font);
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 600;
+  font-feature-settings: "clig" off, "liga" off;
+  line-height: 76px;
+  color: var(--text-dark);
+}
+
+.heading-2 {
+  font-family: var(--font);
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  font-feature-settings: "clig" off, "liga" off;
+  line-height: 125%;
+  color: var(--text-dark);
+}
+
+.heading-3 {
+  font-family: var(--font);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  font-feature-settings: "clig" off, "liga" off;
+  line-height: 125%;
+  color: var(--text-dark);
+}
+
+.regular-text,
+body {
+  font-family: var(--font);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  font-feature-settings: "clig" off, "liga" off;
+  line-height: 150%;
+  color: var(--text-dark);
+}
+
+.caption-text {
+  font-family: var(--font);
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  font-feature-settings: "clig" off, "liga" off;
+  line-height: 140%;
+  color: var(--text-dark);
+}
+
+.link-button-text {
+  font-family: var(--font);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  font-feature-settings: "clig" off, "liga" off;
+  line-height: 150%;
+  color: var(--text-dark);
+}
+
+.burger-link-text {
+  font-family: var(--font);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  font-feature-settings: "clig" off, "liga" off;
+  line-height: 125%;
+  color: var(--text-dark);
+}
+
 /* SVG */
 .svg-symbols {
   display: none;
@@ -36,11 +108,6 @@
 }
 
 body {
-  font-family: var(--font);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  font-feature-settings: "clig" off, "liga" off;
   color: var(--text-dark);
   background-color: var(--color-light);
 }
@@ -95,26 +162,12 @@ img {
 .link-btn {
   min-width: 200px;
   padding: 20px;
-  font-family: var(--font);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  font-feature-settings: "clig" off, "liga" off;
-  line-height: 150%; /* 24px */
-  color: var(--text-dark);
   text-align: center;
   background: var(--color-light);
   border-radius: 100px;
 }
 
 .section__title {
-  font-family: var(--font);
-  font-size: 60px;
-  font-style: normal;
-  font-weight: 600;
-  font-feature-settings: "clig" off, "liga" off;
-  line-height: 125%;
-  color: var(--text-dark);
   text-align: center;
 }
 
@@ -141,26 +194,9 @@ img {
   margin: 0 auto;
 }
 
-.header__nav-link {
-  font-family: var(--font);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  font-feature-settings: "clig" off, "liga" off;
-  line-height: 150%;
-  color: var(--text-dark);
-}
-
 .header__page-link {
   display: flex;
   gap: 8px;
-  font-family: var(--font);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  font-feature-settings: "clig" off, "liga" off;
-  line-height: 150%;
-  color: var(--text-dark);
 }
 
 /* Enjoy */
@@ -193,23 +229,8 @@ img {
   max-width: 530px;
 }
 
-.enjoy__heading {
-  font-family: var(--font);
-  font-size: 72px;
-  font-style: normal;
-  font-weight: 600;
-  font-feature-settings: "clig" off, "liga" off;
-  line-height: 76px;
-  color: var(--text-light);
-}
-
+.enjoy__heading,
 .enjoy__text {
-  font-family: var(--font);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  font-feature-settings: "clig" off, "liga" off;
-  line-height: 150%;
   color: var(--text-light);
 }
 
@@ -292,38 +313,6 @@ img {
   flex-direction: column;
   gap: 16px;
   align-items: center;
-}
-
-.product-card__title {
-  font-family: var(--font);
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  font-feature-settings: "clig" off, "liga" off;
-  line-height: 125%;
-  color: var(--text-dark);
-  text-align: center;
-}
-
-.product-card__description {
-  font-family: var(--font);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  font-feature-settings: "clig" off, "liga" off;
-  line-height: 150%;
-  color: var(--text-dark);
-  text-align: center;
-}
-
-.product-card__price {
-  font-family: var(--font);
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  font-feature-settings: "clig" off, "liga" off;
-  line-height: 125%;
-  color: var(--text-dark);
   text-align: center;
 }
 
@@ -335,13 +324,6 @@ img {
 }
 
 .about__description {
-  font-family: var(--font);
-  font-size: 60px;
-  font-style: normal;
-  font-weight: 600;
-  font-feature-settings: "clig" off, "liga" off;
-  line-height: 125%;
-  color: var(--text-dark);
   letter-spacing: -0.1px; /* For Pixel Perfect */
 }
 
@@ -405,16 +387,6 @@ img {
   text-align: left;
 }
 
-.mobile-app__description {
-  font-family: var(--font);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  font-feature-settings: "clig" off, "liga" off;
-  line-height: 150%; /* 24px */
-  color: var(--text-dark);
-}
-
 .mobile-app__link-buttons {
   display: flex;
   gap: 20px;
@@ -466,12 +438,6 @@ img {
 }
 
 .footer__title {
-  font-family: var(--font);
-  font-size: 60px;
-  font-style: normal;
-  font-weight: 600;
-  font-feature-settings: "clig" off, "liga" off;
-  line-height: 125%; /* 75px */
   color: var(--text-light);
   text-align: left;
 }
@@ -492,12 +458,6 @@ img {
 }
 
 .contacts__heading {
-  font-family: var(--font);
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  font-feature-settings: "clig" off, "liga" off;
-  line-height: 125%; /* 30px */
   color: var(--text-light);
 }
 
@@ -510,11 +470,5 @@ img {
 .contacts__link {
   display: flex;
   gap: 8px;
-  font-family: var(--font);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  font-feature-settings: "clig" off, "liga" off;
-  line-height: 150%; /* 24px */
   color: var(--text-light);
 }

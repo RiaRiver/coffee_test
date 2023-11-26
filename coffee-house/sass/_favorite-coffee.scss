@@ -72,26 +72,6 @@
     flex-direction: column;
     gap: 16px;
     align-items: center;
-  }
-
-  &__title {
-    @include font(24px);
-    line-height: 125%;
-    color: var(--text-dark);
-    text-align: center;
-  }
-
-  &__description {
-    @include font(16px, 400);
-    line-height: 150%;
-    color: var(--text-dark);
-    text-align: center;
-  }
-
-  &__price {
-    @include font(24px);
-    line-height: 125%;
-    color: var(--text-dark);
     text-align: center;
   }
 }

@@ -29,15 +29,8 @@
     max-width: 530px;
   }
 
-  &__heading {
-    @include font(72px);
-    line-height: 76px;
-    color: var(--text-light);
-  }
-
+  &__heading,
   &__text {
-    @include font(16px, 400);
-    line-height: 150%;
     color: var(--text-light);
   }
 }

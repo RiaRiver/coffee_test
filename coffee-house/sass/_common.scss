@@ -1,28 +1,11 @@
 /* Common */
-@mixin font($size: 16px, $weight: 600, $style: normal) {
-  font-family: var(--font);
-  font-size: $size;
-  font-style: $style;
-  font-weight: $weight;
-  font-feature-settings: "clig" off, "liga" off;
-}
-
-@mixin round-btn($brd-color) {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 60px;
-  height: 60px;
-  border: 1px solid var($brd-color);
-  border-radius: 100px;
-}
-
 * {
   box-sizing: border-box;
 }
 
 body {
-  @include font();
+  @extend %regular-text;
+
   color: var(--text-dark);
   background-color: var(--color-light);
 }
@@ -77,18 +60,11 @@ img {
 .link-btn {
   min-width: 200px;
   padding: 20px;
-  line-height: 150%; /* 24px */
-  color: var(--text-dark);
   text-align: center;
   background: var(--color-light);
   border-radius: 100px;
-
-  @include font();
 }
 
 .section__title {
-  @include font(60px);
-  line-height: 125%;
-  color: var(--text-dark);
   text-align: center;
 }

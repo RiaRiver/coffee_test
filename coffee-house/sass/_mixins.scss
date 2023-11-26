@@ -1,0 +1,18 @@
+@mixin font($size: 16px, $lh:100%, $weight: 600, $style: normal) {
+  font-family: var(--font);
+  font-size: $size;
+  font-style: $style;
+  font-weight: $weight;
+  font-feature-settings: "clig" off, "liga" off;
+  line-height: $lh;
+}
+
+@mixin round-btn($brd-color) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border: 1px solid var($brd-color);
+  border-radius: 100px;
+}

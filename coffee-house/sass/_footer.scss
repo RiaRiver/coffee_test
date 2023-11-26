@@ -22,8 +22,6 @@
   }
 
   &__title {
-    @include font(60px);
-    line-height: 125%; /* 75px */
     color: var(--text-light);
     text-align: left;
   }
@@ -40,9 +38,6 @@
 
 .contacts {
   &__heading {
-    @include font(24px);
-
-    line-height: 125%; /* 30px */
     color: var(--text-light);
   }
 
@@ -55,10 +50,6 @@
   &__link {
     display: flex;
     gap: 8px;
-
-    @include font(16px);
-
-    line-height: 150%; /* 24px */
     color: var(--text-light);
   }
 }

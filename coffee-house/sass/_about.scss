@@ -9,9 +9,6 @@
   }
 
   &__description {
-    @include font(60px);
-    line-height: 125%;
-    color: var(--text-dark);
     letter-spacing: -0.1px; /* For Pixel Perfect */
   }
 

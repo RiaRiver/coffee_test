@@ -20,20 +20,10 @@
       gap: 40px;
       margin: 0 auto;
     }
-
-    &-link {
-      @include font();
-      line-height: 150%;
-      color: var(--text-dark);
-    }
   }
 
   &__page-link {
     display: flex;
     gap: 8px;
-
-    @include font();
-    line-height: 150%;
-    color: var(--text-dark);
   }
 }
