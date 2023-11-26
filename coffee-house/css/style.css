@@ -86,20 +86,20 @@ body {
   display: none;
 }
 
+.path--fill {
+  fill: currentColor;
+}
+
 .path--fill-accent {
   fill: var(--text-accent);
 }
 
-.path--fill-dark {
-  fill: var(--text-dark);
-}
-
-.path--stroke-dark {
-  stroke: var(--text-dark);
+.path--stroke {
+  stroke: currentColor;
 }
 
 .arrow-icon-path {
-  stroke: var(--text-dark);
+  stroke: currentColor;
 }
 
 /* Common */
@@ -259,6 +259,7 @@ img {
   justify-content: center;
   width: 60px;
   height: 60px;
+  color: var(--text-dark);
   border: 1px solid var(--border-dark);
   border-radius: 100px;
 }
@@ -462,6 +463,7 @@ img {
   justify-content: center;
   width: 60px;
   height: 60px;
+  color: var(--text-light);
   border: 1px solid var(--border-light);
   border-radius: 100px;
 }

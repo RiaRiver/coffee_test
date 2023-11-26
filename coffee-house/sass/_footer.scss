@@ -30,6 +30,8 @@
 
   &__link {
     @include round-btn(--border-light);
+
+    color: var(--text-light);
   }
 }
 

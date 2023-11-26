@@ -4,19 +4,19 @@
 }
 
 .path {
+  &--fill {
+    fill: currentColor;
+  }
+
   &--fill-accent {
     fill: var(--text-accent);
   }
 
-  &--fill-dark {
-    fill: var(--text-dark);
-  }
-
-  &--stroke-dark {
-    stroke: var(--text-dark);
+  &--stroke {
+    stroke: currentColor;
   }
 }
 
 .arrow-icon-path {
-  stroke: var(--text-dark);
+  stroke: currentColor;
 }

@@ -14,7 +14,9 @@
 
   &__btn {
     @include round-btn(--border-dark);
+
     flex-shrink: 1;
+    color: var(--text-dark);
   }
 
   &__prev-btn {
