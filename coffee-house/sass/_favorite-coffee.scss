@@ -15,14 +15,8 @@
   padding: 0 4px;
 
   &__btn {
-    display: flex;
+    @include round-btn(--border-dark);
     flex-shrink: 1;
-    align-items: center;
-    justify-content: center;
-    width: 60px;
-    height: 60px;
-    border: 1px solid var(--border-dark);
-    border-radius: 100px;
   }
 
   &__prev-btn {

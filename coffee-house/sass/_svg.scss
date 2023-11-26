@@ -1,4 +1,8 @@
 /* SVG */
+.svg-symbols {
+  display: none;
+}
+
 .path {
   &--fill-accent {
     fill: var(--text-accent);

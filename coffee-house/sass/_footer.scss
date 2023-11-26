@@ -1,0 +1,64 @@
+/* Footer */
+.footer {
+  margin: auto 0 40px;
+
+  &__content {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    padding: 100px;
+    background: var(--color-dark);
+    border-radius: 40px;
+
+    & > * {
+      flex: 0 1 100%;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__title {
+    @include font(60px);
+    line-height: 125%; /* 75px */
+    color: var(--text-light);
+    text-align: left;
+  }
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+
+  &__link {
+    @include round-btn(--border-light);
+  }
+}
+
+.contacts {
+  &__heading {
+    @include font(24px);
+
+    line-height: 125%; /* 30px */
+    color: var(--text-light);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__link {
+    display: flex;
+    gap: 8px;
+
+    @include font(16px);
+
+    line-height: 150%; /* 24px */
+    color: var(--text-light);
+  }
+}
