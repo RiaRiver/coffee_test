@@ -1,0 +1,55 @@
+/* Mobile App */
+.mobile-app {
+  &__container {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+
+    & > * {
+      flex: 0 1 100%;
+    }
+  }
+
+  &__text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__title {
+    text-align: left;
+  }
+
+  &__description {
+    @include font(16px, 400);
+
+    line-height: 150%; /* 24px */
+    color: var(--text-dark);
+  }
+
+  &__link-buttons {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__link-btn {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 11px 19px;
+    border: 1px solid var(--border-dark);
+  }
+
+  &__btn-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    text-align-last: left;
+
+    & span:first-child {
+      font-size: 10px;
+      line-height: 140%; /* 14px */
+      color: var(--text-dark);
+    }
+  }
+}

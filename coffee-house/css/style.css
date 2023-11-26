@@ -378,3 +378,60 @@ img {
   transition: 0.5s;
   transform: scale(1.1);
 }
+
+/* Mobile App */
+.mobile-app__container {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+}
+
+.mobile-app__container > * {
+  flex: 0 1 100%;
+}
+
+.mobile-app__text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.mobile-app__title {
+  text-align: left;
+}
+
+.mobile-app__description {
+  font-family: var(--font);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  font-feature-settings: "clig" off, "liga" off;
+  line-height: 150%; /* 24px */
+  color: var(--text-dark);
+}
+
+.mobile-app__link-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.mobile-app__link-btn {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 11px 19px;
+  border: 1px solid var(--border-dark);
+}
+
+.mobile-app__btn-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align-last: left;
+}
+
+.mobile-app__btn-text span:first-child {
+  font-size: 10px;
+  line-height: 140%; /* 14px */
+  color: var(--text-dark);
+}
