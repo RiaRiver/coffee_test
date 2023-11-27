@@ -34,5 +34,6 @@
     @include flex(8px);
 
     margin-bottom: 4px;
+    user-select: none;
   }
 }

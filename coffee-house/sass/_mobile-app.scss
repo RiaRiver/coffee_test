@@ -27,6 +27,7 @@
 
     align-items: center;
     padding: 11px 19px;
+    user-select: none;
     border: 1px solid var(--border-dark);
 
     @include for-desktop {

@@ -1,0 +1,153 @@
+/* stylelint-disable max-nesting-depth */
+/* Menu */
+.header__page-link {
+  position: relative;
+  display: flex;
+  pointer-events: none;
+
+  &::after {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    content: "";
+    background: currentColor;
+  }
+}
+
+.menu {
+  $radius: 40px;
+
+  &__container {
+    @include flex(40px, column);
+    align-items: center;
+  }
+
+  &__title {
+    max-width: 800px;
+    text-align: center;
+  }
+
+  &__products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-flow: row;
+    gap: 40px;
+  }
+
+  &-product {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border-light);
+    border-radius: $radius;
+
+    &__image-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 660px;
+      overflow: hidden;
+      border-radius: $radius;
+    }
+
+    &__image {
+      border-radius: $radius;
+      transition: transform 0.5s ease-out;
+      transform: scale(1.1);
+    }
+
+    &:hover {
+      @include for-desktop {
+        cursor: pointer;
+
+        & img {
+          transform: scale(1);
+        }
+      }
+    }
+
+    &__text {
+      @include flex(12px, column);
+      flex-grow: 1;
+
+      align-items: start;
+      padding: 20px;
+    }
+
+    &__price {
+      margin-top: auto;
+    }
+  }
+}
+
+.tabs {
+  @mixin tab_btn-anim {
+    color: var(--text-light);
+    background: var(--border-dark);
+    border: 1px solid var(--border-dark);
+
+    &::before {
+      background: var(--text-light);
+    }
+  }
+
+  &__buttons {
+    @include flex(16px);
+  }
+
+  &__item {
+    &:first-child {
+      --icon-url: url("../assets/img/menu/coffee.svg");
+    }
+
+    &:nth-child(2) {
+      --icon-url: url("../assets/img/menu/tea.svg");
+    }
+
+    &:last-child {
+      --icon-url: url("../assets/img/menu/cake.svg");
+    }
+
+    & label {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      padding: 7px 15px 7px 7px;
+      user-select: none;
+      border: 1px solid var(--border-light);
+      border-radius: 100px;
+
+      @include for-desktop {
+        transition: color 0.5s ease-out, border 0.5s ease-out, background 0.5s ease-out;
+
+        &:hover {
+          @include tab_btn-anim;
+
+          cursor: pointer;
+        }
+      }
+
+      &::before {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        line-height: 0;
+        content: var(--icon-url);
+        background: var(--border-light);
+        border-radius: 100px;
+        transition: background 0.5s ease-out;
+      }
+    }
+  }
+
+  &__btn {
+    &:checked + label {
+      @include tab_btn-anim;
+
+      pointer-events: none;
+    }
+  }
+}

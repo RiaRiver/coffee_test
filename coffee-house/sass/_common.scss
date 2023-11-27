@@ -48,7 +48,7 @@ img {
   text-decoration: none;
 }
 
-.link-txt {
+.link-txt:not([href="./"]) {
   @include for-desktop {
     position: relative;
     display: flex;
