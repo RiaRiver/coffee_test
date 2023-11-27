@@ -17,6 +17,16 @@
 
     flex-shrink: 1;
     color: var(--text-dark);
+
+    @include for-desktop {
+      cursor: pointer;
+      transition: background 0.5s ease-out, color 0.5s ease-out;
+
+      &:hover {
+        color: var(--text-light);
+        background: var(--color-dark);
+      }
+    }
   }
 
   &__prev-btn {

@@ -28,6 +28,16 @@
     align-items: center;
     padding: 11px 19px;
     border: 1px solid var(--border-dark);
+
+    @include for-desktop {
+      cursor: pointer;
+      transition: background 0.5s ease-out, color 0.5s ease-out;
+
+      &:hover {
+        color: var(--text-light);
+        background: var(--color-dark);
+      }
+    }
   }
 
   &__btn-text {

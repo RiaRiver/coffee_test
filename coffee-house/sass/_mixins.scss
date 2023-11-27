@@ -1,3 +1,9 @@
+@mixin for-desktop {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}
+
 @mixin font($size: 16px, $lh:100%, $weight: 600, $style: normal) {
   font-family: var(--font);
   font-size: $size;

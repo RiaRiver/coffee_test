@@ -32,6 +32,16 @@
     @include round-btn(--border-light);
 
     color: var(--text-light);
+
+    @include for-desktop {
+      transition: background 0.5s ease-out, color 0.5s ease-out, border-color 0.5s ease-out;
+
+      &:hover {
+        color: var(--text-dark);
+        background: var(--text-light);
+        border-color: var(--text-light);
+      }
+    }
   }
 }
 

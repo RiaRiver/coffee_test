@@ -46,5 +46,13 @@
   &__image {
     border-radius: $radius;
     transform: scale(1.1);
+
+    @include for-desktop {
+      transition: transform 0.5s ease-out;
+
+      &:hover {
+        transform: scale(1);
+      }
+    }
   }
 }
