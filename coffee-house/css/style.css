@@ -100,6 +100,10 @@ body {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--text-dark);
   background-color: var(--color-light);
