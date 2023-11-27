@@ -17,7 +17,6 @@
   font-weight: 600;
   font-feature-settings: "clig" off, "liga" off;
   line-height: 76px;
-  color: var(--text-dark);
 }
 
 .heading-2 {
@@ -27,7 +26,6 @@
   font-weight: 600;
   font-feature-settings: "clig" off, "liga" off;
   line-height: 125%;
-  color: var(--text-dark);
 }
 
 .heading-3 {
@@ -37,7 +35,6 @@
   font-weight: 600;
   font-feature-settings: "clig" off, "liga" off;
   line-height: 125%;
-  color: var(--text-dark);
 }
 
 .regular-text,
@@ -48,7 +45,6 @@ body {
   font-weight: 400;
   font-feature-settings: "clig" off, "liga" off;
   line-height: 150%;
-  color: var(--text-dark);
 }
 
 .caption-text {
@@ -58,7 +54,6 @@ body {
   font-weight: 600;
   font-feature-settings: "clig" off, "liga" off;
   line-height: 140%;
-  color: var(--text-dark);
 }
 
 .link-button-text {
@@ -68,7 +63,6 @@ body {
   font-weight: 600;
   font-feature-settings: "clig" off, "liga" off;
   line-height: 150%;
-  color: var(--text-dark);
 }
 
 .burger-link-text {
@@ -78,7 +72,6 @@ body {
   font-weight: 600;
   font-feature-settings: "clig" off, "liga" off;
   line-height: 125%;
-  color: var(--text-dark);
 }
 
 /* SVG */
@@ -142,6 +135,7 @@ img {
 }
 
 .link {
+  color: var(--text-dark);
   text-decoration: none;
 }
 

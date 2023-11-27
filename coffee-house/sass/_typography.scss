@@ -1,43 +1,29 @@
 /* Typography */
 .heading-1 {
   @include font(72px, 76px);
-
-  color: var(--text-dark);
 }
 
 .heading-2 {
   @include font(60px, 125%);
-
-  color: var(--text-dark);
 }
 
 .heading-3 {
   @include font(24px, 125%);
-
-  color: var(--text-dark);
 }
 
 .regular-text,
 %regular-text {
   @include font(16px, 150%, 400);
-
-  color: var(--text-dark);
 }
 
 .caption-text {
   @include font(10px, 140%);
-
-  color: var(--text-dark);
 }
 
 .link-button-text {
   @include font(16px, 150%);
-
-  color: var(--text-dark);
 }
 
 .burger-link-text {
   @include font(32px, 125%);
-
-  color: var(--text-dark);
 }
