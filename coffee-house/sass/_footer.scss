@@ -42,11 +42,14 @@
 
   &__list {
     @include flex(16px, column);
+
+    align-items: start;
   }
 
   &__link {
     @include flex(8px);
 
+    margin-bottom: 4px;
     color: var(--text-light);
   }
 }

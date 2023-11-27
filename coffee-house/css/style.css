@@ -142,7 +142,6 @@ img {
 }
 
 .link {
-  color: var(--text-dark);
   text-decoration: none;
 }
 
@@ -178,8 +177,12 @@ img {
   padding: 20px 40px;
 }
 
+.header__homelink {
+  color: var(--text-dark);
+}
+
 .header__logo {
-  flex-shrink: 0;
+  display: block;
 }
 
 .header__nav {
@@ -195,10 +198,15 @@ img {
   margin: 0 auto;
 }
 
+.header__nav-link {
+  margin-bottom: 4px;
+}
+
 .header__page-link {
   display: flex;
   flex-direction: row;
   gap: 8px;
+  margin-bottom: 4px;
 }
 
 /* Enjoy */
@@ -367,7 +375,6 @@ img {
 
 .about__image {
   border-radius: 20px;
-  transition: 0.5s;
   transform: scale(1.1);
 }
 
@@ -413,12 +420,6 @@ img {
   flex-direction: column;
   gap: 2px;
   text-align-last: left;
-}
-
-.mobile-app__btn-text span:first-child {
-  font-size: 10px;
-  line-height: 140%; /* 14px */
-  color: var(--text-dark);
 }
 
 /* Footer */
@@ -476,11 +477,13 @@ img {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  align-items: start;
 }
 
 .contacts__link {
   display: flex;
   flex-direction: row;
   gap: 8px;
+  margin-bottom: 4px;
   color: var(--text-light);
 }

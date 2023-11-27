@@ -16,37 +16,39 @@
 <body>
   <header class="header">
     <div class="container header__container">
-      <svg xmlns="http://www.w3.org/2000/svg"
-           class="logo header__logo"
-           width="100"
-           height="60">
-        <use href="#header-logo"></use>
-      </svg>
+      <a class="header__homelink"
+         aria-label="Home link">
+        <svg xmlns="http://www.w3.org/2000/svg"
+             class="logo header__logo"
+             width="100"
+             height="60">
+          <use href="#header-logo"></use>
+        </svg>
+      </a>
 
       <nav class="header__nav">
         <ul class="list header__nav-menu">
           <li class="header__nav-item">
             <a href=""
-               class="link header__nav-link link-button-text">Favorite&nbsp;coffee</a>
+               class="link link-txt header__nav-link link-button-text">Favorite&nbsp;coffee</a>
           </li>
           <li class="header__nav-item">
             <a href=""
-               class="link header__nav-link link-button-text">About</a>
+               class="link link-txt header__nav-link link-button-text">About</a>
           </li>
           <li class="header__nav-item">
             <a href=""
-               class="link header__nav-link link-button-text">Mobile&nbsp;app</a>
+               class="link link-txt header__nav-link link-button-text">Mobile&nbsp;app</a>
           </li>
           <li class="header__nav-item">
             <a href=""
-               class="link header__nav-link link-button-text">Contact&nbsp;us</a>
+               class="link link-txt header__nav-link link-button-text">Contact&nbsp;us</a>
           </li>
         </ul>
 
         <a href=""
-           class="link header__page-link link-button-text">Menu
+           class="link link-txt header__page-link link-button-text">Menu
           <svg xmlns="http://www.w3.org/2000/svg"
-               class="logo header__logo"
                width="20"
                height="20">
             <use href="#coffee-cup-icon"></use>
@@ -239,7 +241,7 @@
                 <use href="#apple-icon"></use>
               </svg>
               <span class="mobile-app__btn-text">
-                <span>Available on the</span>
+                <span class="caption-text">Available on the</span>
                 <span>App Store</span>
               </span>
             </a>
@@ -253,7 +255,7 @@
                 <use href="#google-icon"></use>
               </svg>
               <span class="mobile-app__btn-text">
-                <span>Available on</span>
+                <span class="caption-text">Available on</span>
                 <span>Google Play</span>
               </span>
             </a>
@@ -322,19 +324,19 @@
           <ul class="list contacts__list">
             <li class="contacts__item">
               <a href=""
-                 class="link contacts__link link-button-text">
+                 class="link link-txt contacts__link link-button-text">
                 <svg xmlns="http://www.w3.org/2000/svg"
                      class="icon contacts-icon"
                      width="20"
                      height="20">
                   <use href="#address-icon"></use>
                 </svg>
-                <span>8558 Green Rd., LA</span>
+                <span>8558 Green Rd., &nbsp;LA</span>
               </a>
             </li>
             <li class="contacts__item">
               <a href=""
-                 class="link contacts__link link-button-text">
+                 class="link link-txt contacts__link link-button-text">
                 <svg xmlns="http://www.w3.org/2000/svg"
                      class="icon contacts-icon"
                      width="20"
@@ -345,8 +347,7 @@
               </a>
             </li>
             <li class="contacts__item">
-              <a href=""
-                 class="link contacts__link link-button-text">
+              <a class="contacts__link link-button-text">
                 <svg xmlns="http://www.w3.org/2000/svg"
                      class="icon contacts-icon"
                      width="20"

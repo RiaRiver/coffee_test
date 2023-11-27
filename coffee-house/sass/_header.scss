@@ -6,8 +6,12 @@
     padding: 20px 40px;
   }
 
+  &__homelink {
+    color: var(--text-dark);
+  }
+
   &__logo {
-    flex-shrink: 0;
+    display: block;
   }
 
   &__nav {
@@ -20,9 +24,15 @@
 
       margin: 0 auto;
     }
+
+    &-link {
+      margin-bottom: 4px;
+    }
   }
 
   &__page-link {
     @include flex(8px);
+
+    margin-bottom: 4px;
   }
 }

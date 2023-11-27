@@ -34,11 +34,5 @@
     @include flex(2px, column);
 
     text-align-last: left;
-
-    & span:first-child {
-      font-size: 10px;
-      line-height: 140%; /* 14px */
-      color: var(--text-dark);
-    }
   }
 }
