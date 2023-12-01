@@ -6,10 +6,6 @@
     @include flex(40px, column);
   }
 
-  &__description {
-    letter-spacing: -0.1px; /* For Pixel Perfect */
-  }
-
   &__images {
     display: grid;
     grid-template: auto auto auto / 1fr 1fr;

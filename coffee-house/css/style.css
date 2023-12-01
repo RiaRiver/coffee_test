@@ -179,7 +179,6 @@ img {
 .text-accent {
   font-style: italic;
   color: var(--text-accent);
-  letter-spacing: 0; /* For Pixel Perfect */
 }
 
 .link-btn {
@@ -399,10 +398,6 @@ img {
   display: flex;
   flex-direction: column;
   gap: 40px;
-}
-
-.about__description {
-  letter-spacing: -0.1px; /* For Pixel Perfect */
 }
 
 .about__images {
