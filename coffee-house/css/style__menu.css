@@ -121,6 +121,13 @@ picture {
   border: none;
 }
 
+button,
+a,
+input,
+label {
+  -webkit-tap-highlight-color: transparent;
+}
+
 img {
   display: block;
   width: 100%;
