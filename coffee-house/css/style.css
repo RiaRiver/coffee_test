@@ -114,7 +114,7 @@ h2,
 h3,
 p,
 button,
-figure {
+picture {
   padding: 0;
   margin: 0;
   background: none;
@@ -411,7 +411,7 @@ img {
   gap: 40px;
 }
 
-.about__image-wrapper {
+.about__image-item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -420,21 +420,21 @@ img {
   border-radius: 20px;
 }
 
-.about__image-wrapper:first-child {
+.about__image-item:first-child {
   grid-row: 1/span 2;
   max-height: 590px;
 }
 
-.about__image-wrapper:last-child {
+.about__image-item:last-child {
   grid-row: 2/span 2;
   max-height: 590px;
 }
 
-.about__image-wrapper:nth-child(2) {
+.about__image-item:nth-child(2) {
   max-height: 430px;
 }
 
-.about__image-wrapper:nth-child(3) {
+.about__image-item:nth-child(3) {
   max-height: 430px;
 }
 
