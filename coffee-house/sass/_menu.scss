@@ -58,7 +58,7 @@
     }
 
     &:hover {
-      @include for-desktop {
+      @include hovered-devices {
         cursor: pointer;
 
         & img {
@@ -118,7 +118,7 @@
       border: 1px solid var(--border-light);
       border-radius: 100px;
 
-      @include for-desktop {
+      @include hovered-devices {
         transition: color 0.5s ease-out, border 0.5s ease-out, background 0.5s ease-out;
 
         &:hover {

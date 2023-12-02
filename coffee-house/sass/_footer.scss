@@ -10,6 +10,17 @@
     background: var(--color-dark);
     border-radius: 40px;
 
+    @include size-tablet {
+      flex-direction: column;
+      align-items: start;
+      padding: 100px 60px;
+    }
+
+    @include size-mobile {
+      gap: 40px;
+      padding: 60px 16px;
+    }
+
     & > * {
       flex: 0 1 100%;
     }
@@ -22,6 +33,14 @@
   &__title {
     color: var(--text-light);
     text-align: left;
+
+    @include size-tablet {
+      max-width: 568px;
+    }
+
+    @include size-mobile {
+      max-width: 316px;
+    }
   }
 }
 
@@ -33,7 +52,7 @@
 
     color: var(--text-light);
 
-    @include for-desktop {
+    @include hovered-devices {
       transition: background 0.5s ease-out, color 0.5s ease-out, border-color 0.5s ease-out;
 
       &:hover {

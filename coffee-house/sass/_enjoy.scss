@@ -1,10 +1,5 @@
 /* Enjoy */
 .enjoy {
-  &__container {
-    min-height: 644px;
-    padding: 0 40px;
-  }
-
   &__background {
     position: absolute;
     inset: 0;
@@ -19,6 +14,14 @@
     position: relative;
     padding: 100px;
     color: var(--text-light);
+
+    @include size-tablet {
+      padding: 100px 60px;
+    }
+
+    @include size-mobile {
+      padding: 60px 16px;
+    }
   }
 
   &__text-block {
@@ -50,7 +53,17 @@
       transition: opacity 0.3s ease-in;
     }
 
-    @include for-desktop {
+    @include size-tablet {
+      & span {
+        transform: translateX(0);
+      }
+
+      & svg {
+        opacity: 1;
+      }
+    }
+
+    @include hovered-devices {
       &:hover {
         & span {
           transform: translateX(0);

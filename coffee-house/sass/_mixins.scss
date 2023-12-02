@@ -1,5 +1,23 @@
-@mixin for-desktop {
+@mixin hovered-devices {
   @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}
+
+@mixin size-mobile {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin size-hide-elements {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin size-tablet {
+  @media (max-width: 1200px) {
     @content;
   }
 }

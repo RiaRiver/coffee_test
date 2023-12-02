@@ -5,6 +5,14 @@
 
     align-items: center;
 
+    @include size-tablet {
+      flex-direction: column;
+    }
+
+    @include size-mobile {
+      gap: 40px;
+    }
+
     & > * {
       flex: 0 1 100%;
     }
@@ -12,6 +20,14 @@
 
   &__text-block {
     @include flex(40px, column);
+
+    @include size-tablet {
+      max-width: 688px;
+    }
+
+    @include size-mobile {
+      max-width: 348px;
+    }
   }
 
   &__title {
@@ -20,6 +36,11 @@
 
   &__link-buttons {
     @include flex(20px);
+
+    @include size-mobile {
+      flex-direction: column;
+      align-items: start;
+    }
   }
 
   &__link-btn {
@@ -30,7 +51,7 @@
     user-select: none;
     border: 1px solid var(--border-dark);
 
-    @include for-desktop {
+    @include hovered-devices {
       cursor: pointer;
       transition: background 0.5s ease-out, color 0.5s ease-out;
 
