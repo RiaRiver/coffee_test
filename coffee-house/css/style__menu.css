@@ -223,6 +223,7 @@ img {
 .header__container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 20px 40px;
 }
 
@@ -269,6 +270,47 @@ img {
   gap: 8px;
   margin-bottom: 4px;
   user-select: none;
+}
+
+.header__burger-btn {
+  display: none;
+  flex-direction: column;
+  flex-shrink: 0;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: var(--text-dark);
+  border: 1px solid var(--border-dark);
+  border-radius: 100px;
+}
+
+@media (max-width: 768px) {
+  .header__burger-btn {
+    display: flex;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .header__burger-btn {
+    cursor: pointer;
+    transition: background 0.5s ease-out, color 0.5s ease-out;
+  }
+
+  .header__burger-btn:hover {
+    color: var(--text-light);
+    background: var(--border-dark);
+  }
+}
+
+.header__burger-btn::before,
+.header__burger-btn::after {
+  width: 16px;
+  height: 1.4px;
+  content: "";
+  background: currentColor;
+  border-radius: 10px;
 }
 
 /* stylelint-disable max-nesting-depth */
