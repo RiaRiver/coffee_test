@@ -373,7 +373,7 @@ img {
   transition: opacity 0.3s ease-in;
 }
 
-@media (max-width: 1200px) {
+@media (hover: none) and (pointer: coarse) {
   .enjoy__page-link span {
     transform: translateX(0);
   }

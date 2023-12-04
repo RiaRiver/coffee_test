@@ -4,6 +4,12 @@
   }
 }
 
+@mixin touch-devices {
+  @media (hover: none) and (pointer: coarse) {
+    @content;
+  }
+}
+
 @mixin size-mobile {
   @media (max-width: 600px) {
     @content;
