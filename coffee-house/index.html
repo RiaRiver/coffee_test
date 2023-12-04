@@ -28,8 +28,15 @@
         content="./browserconfig.xml">
   <meta name="theme-color"
         content="#e1d4c9">
-  <link rel="stylesheet"
-        href="https://fonts.cdnfonts.com/css/inter?styles=29139,29134,29140,29141">
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/inter?styles=29134,29141"
+        rel="stylesheet">
   <link rel="stylesheet"
         href="css/normalize.css">
   <link rel="stylesheet"
@@ -81,7 +88,13 @@
           </svg>
         </a>
       </nav>
+
+      <button type="button"
+              class="btn header__burger-btn"
+              aria-label="Open navigation menu">
+      </button>
     </div>
+    <!-- /.container header__container -->
   </header>
 
   <main class="main">
@@ -119,8 +132,8 @@
         <h2 class="section__title heading-2">Choose your <span class="text-accent">favorite</span> coffee</h2>
         <div class="slider">
           <div class="slides-block">
-            <div class="slides">
-              <div class="slide">
+            <ul class="list slides">
+              <li class="slide">
                 <div class="product-card">
                   <img src="assets/img/favorite-coffee/coffee-slider-1.png"
                        alt=""
@@ -128,9 +141,7 @@
                   <div class="product-card__text">
                     <h3 class="product-card__title heading-3">S’mores Frappuccino</h3>
                     <!-- /.product-card__title -->
-                    <p class="product-card__description regular-text">This new drink takes an&nbsp;espresso and mixes it&nbsp;with brown sugar and cinnamon before being
-                      topped
-                      with oat milk.</p>
+                    <p class="product-card__description regular-text">This new drink takes an&nbsp;espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
                     <!-- /.product-card__description -->
                     <span class="product-card__price heading-3">$5.50</span>
                     <!-- /.product-card__price -->
@@ -138,10 +149,10 @@
                   <!-- /.product-card__text -->
                 </div>
                 <!-- /.product-card -->
-              </div>
+              </li>
               <!-- /.slide -->
 
-              <div class="slide">
+              <li class="slide">
                 <div class="product-card">
                   <img src="assets/img/favorite-coffee/coffee-slider-2.png"
                        alt=""
@@ -149,8 +160,7 @@
                   <div class="product-card__text">
                     <h3 class="product-card__title heading-3">Caramel Macchiato</h3>
                     <!-- /.product-card__title -->
-                    <p class="product-card__description regular-text">Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick
-                      foam.</p>
+                    <p class="product-card__description regular-text">Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.</p>
                     <!-- /.product-card__description -->
                     <span class="product-card__price heading-3">$5.00</span>
                     <!-- /.product-card__price -->
@@ -158,10 +168,10 @@
                   <!-- /.product-card__text -->
                 </div>
                 <!-- /.product-card -->
-              </div>
+              </li>
               <!-- /.slide -->
 
-              <div class="slide">
+              <li class="slide">
                 <div class="product-card">
                   <img src="assets/img/favorite-coffee/coffee-slider-3.png"
                        alt=""
@@ -177,9 +187,9 @@
                   <!-- /.product-card__text -->
                 </div>
                 <!-- /.product-card -->
-              </div>
+              </li>
               <!-- /.slide -->
-            </div>
+            </ul>
             <!-- /.slides -->
           </div>
           <!-- /.slides-block -->
@@ -206,14 +216,14 @@
             </svg>
           </button>
 
-          <div class="slider__pagination">
-            <div class="slider__pagination-bullet slider__pagination-bullet--active"></div>
+          <ul class="list slider__pagination">
+            <li class="slider__pagination-bullet slider__pagination-bullet--active"></li>
             <!-- /.slider__pagination-bullet -->
-            <div class="slider__pagination-bullet"></div>
+            <li class="slider__pagination-bullet"></li>
             <!-- /.slider__pagination-bullet -->
-            <div class="slider__pagination-bullet"></div>
+            <li class="slider__pagination-bullet"></li>
             <!-- /.slider__pagination-bullet -->
-          </div>
+          </ul>
           <!-- /.slider__pagination -->
         </div>
         <!-- /.slider -->
@@ -230,35 +240,35 @@
         <p class="about__description heading-2">Resource is&nbsp;<span class="text-accent">the perfect and cozy place</span> where you can enjoy a&nbsp;variety of&nbsp;hot beverages, relax, catch
           up&nbsp;with friends, or&nbsp;get some work done.</p>
 
-        <div class="about__images">
-          <figure class="about__image-wrapper">
+        <ul class="list about__images">
+          <li class="about__image-item">
             <img src="assets/img/about/about-1.jpg"
                  alt=""
                  class="about__image">
-          </figure>
-          <!-- /.about__image-wrapper -->
+          </li>
+          <!-- /.about__image-item -->
 
-          <figure class="about__image-wrapper">
+          <li class="about__image-item">
             <img src="assets/img/about/about-2.jpg"
                  alt=""
                  class="about__image">
-          </figure>
-          <!-- /.about__image-wrapper -->
+          </li>
+          <!-- /.about__image-item -->
 
-          <figure class="about__image-wrapper">
+          <li class="about__image-item">
             <img src="assets/img/about/about-3.jpg"
                  alt=""
                  class="about__image">
-          </figure>
-          <!-- /.about__image-wrapper -->
+          </li>
+          <!-- /.about__image-item -->
 
-          <figure class="about__image-wrapper">
+          <li class="about__image-item">
             <img src="assets/img/about/about-4.jpg"
                  alt=""
                  class="about__image">
-          </figure>
-          <!-- /.about__image-wrapper -->
-        </div>
+          </li>
+          <!-- /.about__image-item -->
+        </ul>
         <!-- /.about__images -->
       </div>
       <!-- /.container about -->
@@ -305,11 +315,11 @@
         </div>
         <!-- /.mobile-app__text-block -->
 
-        <figure class="mobile-app__image-wrapper">
+        <picture class="mobile-app__image-wrapper">
           <img src="assets/img/mobile-app-image.png"
                alt=""
                class="mobile-app__image">
-        </figure>
+        </picture>
       </div>
       <!-- /.container mobile-app -->
     </section>
@@ -336,6 +346,7 @@
                 </svg>
               </a>
             </li>
+
             <li class="social-links__item">
               <a href="https://www.instagram.com/delandbostoncoffeehouse/"
                  class="link social-links__link"
@@ -349,6 +360,7 @@
                 </svg>
               </a>
             </li>
+
             <li class="social-links__item">
               <a href="https://web.facebook.com/BostonCoffeehouseDeLand/"
                  class="link social-links__link"
@@ -381,6 +393,7 @@
                 <span>8558 Green Rd., &nbsp;LA</span>
               </a>
             </li>
+
             <li class="contacts__item">
               <a href="tel:+1(603)555-0123"
                  class="link link-txt contacts__link link-button-text">
@@ -390,9 +403,10 @@
                      height="20">
                   <use href="#phone-icon"></use>
                 </svg>
-                <span>+1&nbsp;(603)&nbsp;555&#8209;0123</span>
+                <span>+1&nbsp;(603)&nbsp;555-0123</span>
               </a>
             </li>
+
             <li class="contacts__item">
               <a class="contacts__link link-button-text">
                 <svg xmlns="http://www.w3.org/2000/svg"

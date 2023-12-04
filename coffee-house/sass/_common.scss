@@ -19,11 +19,18 @@ h2,
 h3,
 p,
 button,
-figure {
+picture {
   padding: 0;
   margin: 0;
   background: none;
   border: none;
+}
+
+button,
+a,
+input,
+label {
+  -webkit-tap-highlight-color: transparent;
 }
 
 img {
@@ -49,9 +56,8 @@ img {
 }
 
 .link-txt:not([href="./"]) {
-  @include for-desktop {
+  @include hovered-devices {
     position: relative;
-    display: flex;
     cursor: pointer;
 
     &::after {
@@ -79,12 +85,15 @@ img {
   max-width: 1440px;
   padding: 0 40px;
   margin: 0 auto;
+
+  @include size-mobile {
+    padding: 0 16px;
+  }
 }
 
 .text-accent {
   font-style: italic;
   color: var(--text-accent);
-  letter-spacing: 0; /* For Pixel Perfect */
 }
 
 .link-btn {

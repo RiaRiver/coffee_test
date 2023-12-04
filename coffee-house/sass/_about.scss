@@ -6,21 +6,24 @@
     @include flex(40px, column);
   }
 
-  &__description {
-    letter-spacing: -0.1px; /* For Pixel Perfect */
-  }
-
   &__images {
     display: grid;
     grid-template: auto auto auto / 1fr 1fr;
     gap: 40px;
+
+    @include size-hide-elements {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
-  &__image-wrapper {
+  &__image-item {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 660px;
+    width: 100%;
+    max-width: 688px;
     overflow: hidden;
     border-radius: $radius;
 
@@ -34,12 +37,14 @@
       max-height: 590px;
     }
 
-    &:nth-child(2) {
-      max-height: 430px;
-    }
-
+    &:nth-child(2),
     &:nth-child(3) {
       max-height: 430px;
+      aspect-ratio: 66/43;
+
+      @include size-hide-elements {
+        display: none;
+      }
     }
   }
 
@@ -47,7 +52,17 @@
     border-radius: $radius;
     transform: scale(1.1);
 
-    @include for-desktop {
+    @include size-hide-elements {
+      /* stylelint-disable-next-line number-max-precision */
+      transform: scale(1.055);
+    }
+
+    @include size-mobile {
+      height: 590px;
+      transform: scale(1.23);
+    }
+
+    @include hovered-devices {
       transition: transform 0.5s ease-out;
 
       &:hover {

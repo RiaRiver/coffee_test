@@ -12,13 +12,17 @@
   align-items: center;
   padding: 0 4px;
 
+  @include size-tablet {
+    padding: 0;
+  }
+
   &__btn {
     @include round-btn(--border-dark);
 
     flex-shrink: 1;
     color: var(--text-dark);
 
-    @include for-desktop {
+    @include hovered-devices {
       cursor: pointer;
       transition: background 0.5s ease-out, color 0.5s ease-out;
 
@@ -26,6 +30,10 @@
         color: var(--text-light);
         background: var(--color-dark);
       }
+    }
+
+    @include size-mobile {
+      display: none;
     }
   }
 
@@ -55,7 +63,7 @@
 }
 
 .slides-block {
-  flex-basis: 80%;
+  flex-basis: 60%;
   flex-grow: 1;
   overflow: hidden;
 }

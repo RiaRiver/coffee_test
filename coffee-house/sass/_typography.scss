@@ -1,10 +1,19 @@
 /* Typography */
 .heading-1 {
   @include font(72px, 76px);
+
+  @include size-mobile {
+    font-size: 42px;
+    line-height: 48px;
+  }
 }
 
 .heading-2 {
   @include font(60px, 125%);
+
+  @include size-mobile {
+    font-size: 32px;
+  }
 }
 
 .heading-3 {

@@ -28,8 +28,15 @@
         content="./browserconfig.xml">
   <meta name="theme-color"
         content="#e1d4c9">
-  <link rel="stylesheet"
-        href="https://fonts.cdnfonts.com/css/inter?styles=29139,29134,29140,29141">
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/inter?styles=29134,29141"
+        rel="stylesheet">
   <link rel="stylesheet"
         href="../css/normalize.css">
   <link rel="stylesheet"
@@ -81,7 +88,13 @@
           </svg>
         </a>
       </nav>
+
+      <button type="button"
+              class="btn header__burger-btn"
+              aria-label="Open navigation menu">
+      </button>
     </div>
+    <!-- /.container header__container -->
   </header>
 
   <main class="main">
@@ -91,7 +104,7 @@
       <div class="container menu__container">
         <h1 class="section__title heading-2"
             hidden>Menu</h1>
-        <h2 class="menu__title heading-2">Behind each of&nbsp;our cups hides an&nbsp;<span class="text-accent">amazing surprise</span></h2>
+        <h2 class="menu__title heading-2">Behind each of&nbsp;our cups hides an <span class="text-accent">amazing surprise</span></h2>
 
         <form class="tabs">
           <ul class="list tabs__buttons">
@@ -139,11 +152,11 @@
 
         <ul class="list menu__products">
           <li class="menu-product">
-            <figure class="menu-product__image-wrapper">
+            <picture class="menu-product__image-wrapper">
               <img src="../assets/img/menu/coffee-1.jpg"
                    alt=""
                    class="menu-product__image">
-            </figure>
+            </picture>
             <!-- /.menu-product__img -->
             <div class="menu-product__text">
               <h3 class="menu-product__title heading-3">Irish coffee</h3>
@@ -158,11 +171,11 @@
           <!-- /.menu-product -->
 
           <li class="menu-product">
-            <figure class="menu-product__image-wrapper">
+            <picture class="menu-product__image-wrapper">
               <img src="../assets/img/menu/coffee-2.jpg"
                    alt=""
                    class="menu-product__image">
-            </figure>
+            </picture>
             <!-- /.menu-product__img -->
             <div class="menu-product__text">
               <h3 class="menu-product__title heading-3">Kahlua coffee</h3>
@@ -177,11 +190,11 @@
           <!-- /.menu-product -->
 
           <li class="menu-product">
-            <figure class="menu-product__image-wrapper">
+            <picture class="menu-product__image-wrapper">
               <img src="../assets/img/menu/coffee-3.jpg"
                    alt=""
                    class="menu-product__image">
-            </figure>
+            </picture>
             <!-- /.menu-product__img -->
             <div class="menu-product__text">
               <h3 class="menu-product__title heading-3">Honey raf</h3>
@@ -196,16 +209,16 @@
           <!-- /.menu-product -->
 
           <li class="menu-product">
-            <figure class="menu-product__image-wrapper">
+            <picture class="menu-product__image-wrapper">
               <img src="../assets/img/menu/coffee-4.jpg"
                    alt=""
                    class="menu-product__image">
-            </figure>
+            </picture>
             <!-- /.menu-product__img -->
             <div class="menu-product__text">
               <h3 class="menu-product__title heading-3">Ice cappuccino</h3>
               <!-- /.menu-product__title -->
-              <p class="menu-product__description regular-text">Cappuccino with soft thick foam in&nbsp;summer version with ice</p>
+              <p class="menu-product__description regular-text">Cappuccino with soft thick foam&nbsp;in summer version with ice</p>
               <!-- /.menu-product__description -->
               <span class="menu-product__price heading-3">$5.00</span>
               <!-- /.menu-product__price -->
@@ -215,11 +228,11 @@
           <!-- /.menu-product -->
 
           <li class="menu-product">
-            <figure class="menu-product__image-wrapper">
+            <picture class="menu-product__image-wrapper">
               <img src="../assets/img/menu/coffee-5.jpg"
                    alt=""
                    class="menu-product__image">
-            </figure>
+            </picture>
             <!-- /.menu-product__img -->
             <div class="menu-product__text">
               <h3 class="menu-product__title heading-3">Espresso</h3>
@@ -234,11 +247,11 @@
           <!-- /.menu-product -->
 
           <li class="menu-product">
-            <figure class="menu-product__image-wrapper">
+            <picture class="menu-product__image-wrapper">
               <img src="../assets/img/menu/coffee-6.jpg"
                    alt=""
                    class="menu-product__image">
-            </figure>
+            </picture>
             <!-- /.menu-product__img -->
             <div class="menu-product__text">
               <h3 class="menu-product__title heading-3">Latte</h3>
@@ -253,11 +266,11 @@
           <!-- /.menu-product -->
 
           <li class="menu-product">
-            <figure class="menu-product__image-wrapper">
+            <picture class="menu-product__image-wrapper">
               <img src="../assets/img/menu/coffee-7.jpg"
                    alt=""
                    class="menu-product__image">
-            </figure>
+            </picture>
             <!-- /.menu-product__img -->
             <div class="menu-product__text">
               <h3 class="menu-product__title heading-3">Latte macchiato</h3>
@@ -272,11 +285,11 @@
           <!-- /.menu-product -->
 
           <li class="menu-product">
-            <figure class="menu-product__image-wrapper">
+            <picture class="menu-product__image-wrapper">
               <img src="../assets/img/menu/coffee-8.jpg"
                    alt=""
                    class="menu-product__image">
-            </figure>
+            </picture>
             <!-- /.menu-product__img -->
             <div class="menu-product__text">
               <h3 class="menu-product__title heading-3">Coffee with cognac</h3>
@@ -291,6 +304,16 @@
           <!-- /.menu-product -->
         </ul>
         <!-- /.menu__products -->
+
+        <button type="button"
+                class="btn menu__add-btn"
+                aria-label="View more products">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               width="24"
+               height="24">
+            <use href="#add-icon"></use>
+          </svg>
+        </button>
       </div>
       <!-- /.container menu__container -->
     </section>
@@ -374,7 +397,7 @@
                      height="20">
                   <use href="#phone-icon"></use>
                 </svg>
-                <span>+1&nbsp;(603)&nbsp;555&#8209;0123</span>
+                <span>+1&nbsp;(603)&nbsp;555-0123</span>
               </a>
             </li>
 
@@ -465,6 +488,24 @@
         <path class="path path--stroke"
               d="M13.333 9.16675H15.4163C16.5669 9.16675 17.4997 10.0995 17.4997 11.2501C17.4997 12.4007 16.5669 13.3334 15.4163 13.3334H14.1663"
               stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <svg class="svg-symbols">
+    <defs>
+      <symbol id="add-icon"
+              viewBox="0 0 24 24"
+              fill="none">
+
+        <path class="path path--stroke"
+              d="M21.8883 13.5C21.1645 18.3113 17.013 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C16.1006 2 19.6248 4.46819 21.1679 8"
+              stroke-linecap="round"
+              stroke-linejoin="round" />
+        <path class="path path--stroke"
+              d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3"
               stroke-linecap="round"
               stroke-linejoin="round" />
       </symbol>
