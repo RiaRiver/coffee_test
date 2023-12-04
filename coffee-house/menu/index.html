@@ -104,7 +104,7 @@
       <div class="container menu__container">
         <h1 class="section__title heading-2"
             hidden>Menu</h1>
-        <h2 class="menu__title heading-2">Behind each of&nbsp;our cups hides an&nbsp;<span class="text-accent">amazing surprise</span></h2>
+        <h2 class="menu__title heading-2">Behind each of&nbsp;our cups hides an <span class="text-accent">amazing surprise</span></h2>
 
         <form class="tabs">
           <ul class="list tabs__buttons">
@@ -304,6 +304,16 @@
           <!-- /.menu-product -->
         </ul>
         <!-- /.menu__products -->
+
+        <button type="button"
+                class="btn menu__add-btn"
+                aria-label="View more products">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               width="24"
+               height="24">
+            <use href="#add-icon"></use>
+          </svg>
+        </button>
       </div>
       <!-- /.container menu__container -->
     </section>
@@ -478,6 +488,24 @@
         <path class="path path--stroke"
               d="M13.333 9.16675H15.4163C16.5669 9.16675 17.4997 10.0995 17.4997 11.2501C17.4997 12.4007 16.5669 13.3334 15.4163 13.3334H14.1663"
               stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <svg class="svg-symbols">
+    <defs>
+      <symbol id="add-icon"
+              viewBox="0 0 24 24"
+              fill="none">
+
+        <path class="path path--stroke"
+              d="M21.8883 13.5C21.1645 18.3113 17.013 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C16.1006 2 19.6248 4.46819 21.1679 8"
+              stroke-linecap="round"
+              stroke-linejoin="round" />
+        <path class="path path--stroke"
+              d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3"
               stroke-linecap="round"
               stroke-linejoin="round" />
       </symbol>

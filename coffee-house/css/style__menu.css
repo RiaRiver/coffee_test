@@ -350,11 +350,31 @@ img {
   gap: 40px;
 }
 
+@media (max-width: 1200px) {
+  .menu__products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .menu__products {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 .menu-product {
   display: flex;
   flex-direction: column;
+  max-width: 310px;
+  min-height: 506px;
   border: 1px solid var(--border-light);
   border-radius: 40px;
+}
+
+@media (max-width: 768px) {
+  .menu-product:nth-child(n+5) {
+    display: none;
+  }
 }
 
 .menu-product__image-wrapper {
@@ -395,10 +415,46 @@ img {
   margin-top: auto;
 }
 
+.menu__add-btn {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  color: var(--text-dark);
+  border: 1px solid var(--border-dark);
+  border-radius: 100px;
+}
+
+@media (max-width: 768px) {
+  .menu__add-btn {
+    display: flex;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .menu__add-btn {
+    cursor: pointer;
+    transition: background 0.5s ease-out, color 0.5s ease-out;
+  }
+
+  .menu__add-btn:hover {
+    color: var(--text-light);
+    background: var(--border-dark);
+  }
+}
+
 .tabs__buttons {
   display: flex;
   flex-direction: row;
   gap: 16px;
+}
+
+@media (max-width: 600px) {
+  .tabs__buttons {
+    gap: 8px;
+  }
 }
 
 .tabs__item:first-child {
