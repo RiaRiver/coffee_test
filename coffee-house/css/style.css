@@ -563,8 +563,15 @@ img {
 
 @media (max-width: 768px) {
   .about__image {
-    width: auto;
-    transform: none;
+    /* stylelint-disable-next-line number-max-precision */
+    transform: scale(1.055);
+  }
+}
+
+@media (max-width: 600px) {
+  .about__image {
+    height: 590px;
+    transform: scale(1.23);
   }
 }
 

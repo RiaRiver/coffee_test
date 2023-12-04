@@ -53,8 +53,13 @@
     transform: scale(1.1);
 
     @include size-hide-elements {
-      width: auto;
-      transform: none;
+      /* stylelint-disable-next-line number-max-precision */
+      transform: scale(1.055);
+    }
+
+    @include size-mobile {
+      height: 590px;
+      transform: scale(1.23);
     }
 
     @include hovered-devices {
