@@ -166,7 +166,6 @@ img {
 @media (hover: hover) and (pointer: fine) {
   .link-txt:not([href="./"]) {
     position: relative;
-    display: flex;
     cursor: pointer;
   }
 
@@ -261,6 +260,7 @@ img {
 }
 
 .header__nav-link {
+  display: flex;
   margin-bottom: 4px;
 }
 

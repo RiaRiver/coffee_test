@@ -58,7 +58,6 @@ img {
 .link-txt:not([href="./"]) {
   @include hovered-devices {
     position: relative;
-    display: flex;
     cursor: pointer;
 
     &::after {
