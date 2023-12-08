@@ -345,21 +345,11 @@ img {
 
 .menu__products {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, 310px);
   grid-auto-flow: row;
   gap: 40px;
-}
-
-@media (max-width: 1200px) {
-  .menu__products {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .menu__products {
-    grid-template-columns: repeat(1, 1fr);
-  }
+  justify-content: center;
+  width: 100%;
 }
 
 .menu-product {
