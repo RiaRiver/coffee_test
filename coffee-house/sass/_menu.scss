@@ -1,9 +1,8 @@
-/* stylelint-disable max-nesting-depth */
+// stylelint-disable max-nesting-depth
 /* Menu */
 .header__page-link {
   position: relative;
   display: flex;
-  pointer-events: none;
 
   &::after {
     position: absolute;

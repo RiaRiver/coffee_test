@@ -40,6 +40,12 @@ img {
   object-fit: cover;
 }
 
+.no-scroll {
+  @include size-hide-elements {
+    overflow: hidden;
+  }
+}
+
 .section {
   margin-bottom: 100px;
 }
@@ -55,7 +61,7 @@ img {
   text-decoration: none;
 }
 
-.link-txt:not([href="./"]) {
+.link-txt:not(.link-txt--no-hover) {
   @include hovered-devices {
     position: relative;
     cursor: pointer;
