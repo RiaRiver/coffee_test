@@ -110,14 +110,15 @@
             hidden>Menu</h1>
         <h2 class="menu__title heading-2">Behind each of&nbsp;our cups hides an <span class="text-accent">amazing surprise</span></h2>
 
-        <form class="tabs">
+        <form id="tabs"
+              class="tabs">
           <ul class="list tabs__buttons">
-            <li class="tabs__item">
+            <li class="menu__btn tabs__item">
               <input id="tab1"
                      type="radio"
                      class="tabs__btn"
                      name="tabs"
-                     value="tab1"
+                     value="coffee"
                      checked
                      hidden>
               <label class="link-button-text"
@@ -126,12 +127,12 @@
               </label>
             </li>
 
-            <li class="tabs__item">
+            <li class="menu__btn tabs__item">
               <input id="tab2"
                      type="radio"
                      class="tabs__btn"
                      name="tabs"
-                     value="tab2"
+                     value="tea"
                      hidden>
               <label class="link-button-text"
                      for="tab2">
@@ -139,12 +140,12 @@
               </label>
             </li>
 
-            <li class="tabs__item">
+            <li class="menu__btn tabs__item">
               <input id="tab3"
                      type="radio"
                      class="tabs__btn"
                      name="tabs"
-                     value="tab3"
+                     value="dessert"
                      hidden>
               <label class="link-button-text"
                      for="tab3">
@@ -155,157 +156,6 @@
         </form>
 
         <ul class="list menu__products">
-          <li class="menu-product">
-            <picture class="menu-product__image-wrapper">
-              <img src="../assets/img/menu/coffee-1.jpg"
-                   alt=""
-                   class="menu-product__image">
-            </picture>
-            <!-- /.menu-product__img -->
-            <div class="menu-product__text">
-              <h3 class="menu-product__title heading-3">Irish coffee</h3>
-              <!-- /.menu-product__title -->
-              <p class="menu-product__description regular-text">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
-              <!-- /.menu-product__description -->
-              <span class="menu-product__price heading-3">$7.00</span>
-              <!-- /.menu-product__price -->
-            </div>
-            <!-- /.menu-product__text -->
-          </li>
-          <!-- /.menu-product -->
-
-          <li class="menu-product">
-            <picture class="menu-product__image-wrapper">
-              <img src="../assets/img/menu/coffee-2.jpg"
-                   alt=""
-                   class="menu-product__image">
-            </picture>
-            <!-- /.menu-product__img -->
-            <div class="menu-product__text">
-              <h3 class="menu-product__title heading-3">Kahlua coffee</h3>
-              <!-- /.menu-product__title -->
-              <p class="menu-product__description regular-text">Classic coffee with milk and Kahlua liqueur under a&nbsp;cap of&nbsp;frothed milk</p>
-              <!-- /.menu-product__description -->
-              <span class="menu-product__price heading-3">$7.00</span>
-              <!-- /.menu-product__price -->
-            </div>
-            <!-- /.menu-product__text -->
-          </li>
-          <!-- /.menu-product -->
-
-          <li class="menu-product">
-            <picture class="menu-product__image-wrapper">
-              <img src="../assets/img/menu/coffee-3.jpg"
-                   alt=""
-                   class="menu-product__image">
-            </picture>
-            <!-- /.menu-product__img -->
-            <div class="menu-product__text">
-              <h3 class="menu-product__title heading-3">Honey raf</h3>
-              <!-- /.menu-product__title -->
-              <p class="menu-product__description regular-text">Espresso with frothed milk, cream and aromatic honey</p>
-              <!-- /.menu-product__description -->
-              <span class="menu-product__price heading-3">$5.50</span>
-              <!-- /.menu-product__price -->
-            </div>
-            <!-- /.menu-product__text -->
-          </li>
-          <!-- /.menu-product -->
-
-          <li class="menu-product">
-            <picture class="menu-product__image-wrapper">
-              <img src="../assets/img/menu/coffee-4.jpg"
-                   alt=""
-                   class="menu-product__image">
-            </picture>
-            <!-- /.menu-product__img -->
-            <div class="menu-product__text">
-              <h3 class="menu-product__title heading-3">Ice cappuccino</h3>
-              <!-- /.menu-product__title -->
-              <p class="menu-product__description regular-text">Cappuccino with soft thick foam&nbsp;in summer version with ice</p>
-              <!-- /.menu-product__description -->
-              <span class="menu-product__price heading-3">$5.00</span>
-              <!-- /.menu-product__price -->
-            </div>
-            <!-- /.menu-product__text -->
-          </li>
-          <!-- /.menu-product -->
-
-          <li class="menu-product">
-            <picture class="menu-product__image-wrapper">
-              <img src="../assets/img/menu/coffee-5.jpg"
-                   alt=""
-                   class="menu-product__image">
-            </picture>
-            <!-- /.menu-product__img -->
-            <div class="menu-product__text">
-              <h3 class="menu-product__title heading-3">Espresso</h3>
-              <!-- /.menu-product__title -->
-              <p class="menu-product__description regular-text">Classic black coffee</p>
-              <!-- /.menu-product__description -->
-              <span class="menu-product__price heading-3">$4.50</span>
-              <!-- /.menu-product__price -->
-            </div>
-            <!-- /.menu-product__text -->
-          </li>
-          <!-- /.menu-product -->
-
-          <li class="menu-product">
-            <picture class="menu-product__image-wrapper">
-              <img src="../assets/img/menu/coffee-6.jpg"
-                   alt=""
-                   class="menu-product__image">
-            </picture>
-            <!-- /.menu-product__img -->
-            <div class="menu-product__text">
-              <h3 class="menu-product__title heading-3">Latte</h3>
-              <!-- /.menu-product__title -->
-              <p class="menu-product__description regular-text">Espresso coffee with the addition of&nbsp;steamed milk and dense milk foam</p>
-              <!-- /.menu-product__description -->
-              <span class="menu-product__price heading-3">$5.50</span>
-              <!-- /.menu-product__price -->
-            </div>
-            <!-- /.menu-product__text -->
-          </li>
-          <!-- /.menu-product -->
-
-          <li class="menu-product">
-            <picture class="menu-product__image-wrapper">
-              <img src="../assets/img/menu/coffee-7.jpg"
-                   alt=""
-                   class="menu-product__image">
-            </picture>
-            <!-- /.menu-product__img -->
-            <div class="menu-product__text">
-              <h3 class="menu-product__title heading-3">Latte macchiato</h3>
-              <!-- /.menu-product__title -->
-              <p class="menu-product__description regular-text">Espresso with frothed milk and chocolate</p>
-              <!-- /.menu-product__description -->
-              <span class="menu-product__price heading-3">$5.50</span>
-              <!-- /.menu-product__price -->
-            </div>
-            <!-- /.menu-product__text -->
-          </li>
-          <!-- /.menu-product -->
-
-          <li class="menu-product">
-            <picture class="menu-product__image-wrapper">
-              <img src="../assets/img/menu/coffee-8.jpg"
-                   alt=""
-                   class="menu-product__image">
-            </picture>
-            <!-- /.menu-product__img -->
-            <div class="menu-product__text">
-              <h3 class="menu-product__title heading-3">Coffee with cognac</h3>
-              <!-- /.menu-product__title -->
-              <p class="menu-product__description regular-text">Fragrant black coffee with cognac and whipped cream</p>
-              <!-- /.menu-product__description -->
-              <span class="menu-product__price heading-3">$6.50</span>
-              <!-- /.menu-product__price -->
-            </div>
-            <!-- /.menu-product__text -->
-          </li>
-          <!-- /.menu-product -->
         </ul>
         <!-- /.menu__products -->
 

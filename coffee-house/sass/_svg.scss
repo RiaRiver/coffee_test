@@ -1,4 +1,8 @@
 /* SVG */
+svg {
+  pointer-events: none;
+}
+
 .svg-symbols {
   display: none;
 }

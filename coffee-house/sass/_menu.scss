@@ -1,5 +1,7 @@
 // stylelint-disable max-nesting-depth
 /* Menu */
+$radius: 40px;
+
 .header__page-link {
   position: relative;
   display: flex;
@@ -16,8 +18,6 @@
 }
 
 .menu {
-  $radius: 40px;
-
   &__container {
     @include flex(40px, column);
     align-items: center;
@@ -45,47 +45,10 @@
     border: 1px solid var(--border-light);
     border-radius: $radius;
 
-    &:nth-child(n+5) {
+    &[hidden] {
       @include size-hide-elements {
         display: none;
       }
-    }
-
-    &__image-wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      max-width: 660px;
-      overflow: hidden;
-      border-radius: $radius;
-    }
-
-    &__image {
-      border-radius: $radius;
-      transition: transform 0.5s ease-out;
-      transform: scale(1.1);
-    }
-
-    &:hover {
-      @include hovered-devices {
-        cursor: pointer;
-
-        & img {
-          transform: scale(1);
-        }
-      }
-    }
-
-    &__text {
-      @include flex(12px, column);
-      flex-grow: 1;
-
-      align-items: start;
-      padding: 20px;
-    }
-
-    &__price {
-      margin-top: auto;
     }
   }
 
@@ -102,6 +65,10 @@
 
     @include size-hide-elements {
       display: flex;
+
+      &[hidden] {
+        display: none;
+      }
     }
 
     @include hovered-devices {
@@ -114,10 +81,8 @@
       }
     }
   }
-}
 
-.tabs {
-  @mixin tab_btn-anim {
+  @mixin menu_btn-anim {
     color: var(--text-light);
     background: var(--border-dark);
     border: 1px solid var(--border-dark);
@@ -127,27 +92,7 @@
     }
   }
 
-  &__buttons {
-    @include flex(16px);
-
-    @include size-mobile {
-      gap: 8px;
-    }
-  }
-
-  &__item {
-    &:first-child {
-      --icon-url: url("../assets/img/menu/coffee.svg");
-    }
-
-    &:nth-child(2) {
-      --icon-url: url("../assets/img/menu/tea.svg");
-    }
-
-    &:last-child {
-      --icon-url: url("../assets/img/menu/cake.svg");
-    }
-
+  &__btn {
     & label {
       display: flex;
       gap: 8px;
@@ -161,7 +106,7 @@
         transition: color 0.5s ease-out, border 0.5s ease-out, background 0.5s ease-out;
 
         &:hover {
-          @include tab_btn-anim;
+          @include menu_btn-anim;
 
           cursor: pointer;
         }
@@ -174,19 +119,83 @@
         width: 30px;
         height: 30px;
         line-height: 0;
-        content: var(--icon-url);
+        color: var(--text-dark);
+        content: var(--content);
         background: var(--border-light);
         border-radius: 100px;
         transition: background 0.5s ease-out;
       }
     }
+
+    & input {
+      &:checked + label {
+        @include menu_btn-anim;
+
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+.tabs {
+  &__buttons {
+    @include flex(16px);
+
+    @include size-mobile {
+      gap: 8px;
+    }
   }
 
-  &__btn {
-    &:checked + label {
-      @include tab_btn-anim;
-
-      pointer-events: none;
+  &__item {
+    &:first-child {
+      --content: url("../assets/img/menu/coffee.svg");
     }
+
+    &:nth-child(2) {
+      --content: url("../assets/img/menu/tea.svg");
+    }
+
+    &:last-child {
+      --content: url("../assets/img/menu/cake.svg");
+    }
+  }
+}
+
+.product {
+  &__image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 310px;
+    overflow: hidden;
+    border-radius: $radius;
+  }
+
+  &__image {
+    border-radius: $radius;
+    transition: transform 0.5s ease-out;
+    transform: scale(1.1);
+  }
+
+  &:hover {
+    @include hovered-devices {
+      cursor: pointer;
+
+      & img {
+        transform: scale(1);
+      }
+    }
+  }
+
+  &__text {
+    @include flex(12px, column);
+    flex-grow: 1;
+
+    align-items: start;
+    padding: 20px;
+  }
+
+  &__price {
+    margin-top: auto;
   }
 }
