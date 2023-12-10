@@ -1,0 +1,7 @@
+{
+  "extends": [
+    "stylelint-config-htmlacademy",
+    "stylelint-config-recommended-scss",
+    "stylelint-config-recess-order"
+  ]
+}

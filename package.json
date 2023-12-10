@@ -1,0 +1,15 @@
+{
+  "type": "module",
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.23.3",
+    "@babel/plugin-syntax-import-assertions": "^7.23.3",
+    "eslint": "^8.55.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "stylelint": "^15.11.0",
+    "stylelint-config-htmlacademy": "^2.0.1",
+    "stylelint-config-recess-order": "^4.4.0",
+    "stylelint-config-recommended-scss": "^13.1.0",
+    "stylelint-config-standard-scss": "^11.1.0",
+    "stylelint-scss": "^5.3.1"
+  }
+}
