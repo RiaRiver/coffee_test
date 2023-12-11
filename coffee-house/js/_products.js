@@ -16,6 +16,7 @@ const getProducts = async () => {
 
     globalThis.products_coffeeHouse = productsByCategory;
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.error('Ошибка:', error);
   }
 };

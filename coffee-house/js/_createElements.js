@@ -6,8 +6,10 @@ export const createProductCard = (product, index) => {
                           data-category="${product.category}"
                           data-index="${index}">
       <picture class="product__image-wrapper menu-product__image-wrapper">
+        <source srcset="../assets/img/menu/${product.category}-${index + 1}.webp"
+                type="image/webp">
         <img src="../assets/img/menu/${product.category}-${index + 1}.jpg"
-        alt=""
+        alt="${product.category}"
         class="product__image menu-product__image">
       </picture>
 
@@ -32,8 +34,10 @@ export const createModalElement = (product, index) => {
                         id="modal-product">
     <div class="modal__container modal-product__container">
       <picture class="product__image-wrapper modal-product__image-wrapper">
+        <source srcset="../assets/img/menu/${product.category}-${index + 1}.webp"
+                type="image/webp">
         <img src="../assets/img/menu/${product.category}-${index + 1}.jpg"
-          alt=""
+          alt="${product.category}"
           class="product__image modal-product__image">
       </picture>
       <form class="modal-product__product" data-price="${product.price}">
