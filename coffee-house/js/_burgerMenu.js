@@ -1,19 +1,21 @@
+// eslint-disable-next-line import/extensions
+import handleScroll from './_scroll.js';
+
 const initBurgerMenu = () => {
   const burgerBtn = document.querySelector('.header__burger-btn');
   const menu = document.querySelector('.header__nav');
   const activeAttr = 'data-active';
-  const noScrollClass = 'no-scroll';
 
   const toggleMenu = () => {
     menu.toggleAttribute(activeAttr);
     burgerBtn.toggleAttribute(activeAttr);
-    document.body.classList.toggle(noScrollClass);
+    handleScroll('toggle');
   };
 
   const closeMenu = () => {
     menu.removeAttribute(activeAttr);
     burgerBtn.removeAttribute(activeAttr);
-    document.body.classList.remove(noScrollClass);
+    handleScroll('on');
   };
 
   const handleMenu = (event) => {

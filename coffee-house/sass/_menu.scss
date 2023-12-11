@@ -133,6 +133,19 @@ $radius: 40px;
 
         pointer-events: none;
       }
+
+      &[type="checkbox"]:checked + label {
+        pointer-events: auto;
+
+        &:hover {
+          color: inherit;
+          border: 1px solid var(--border-light);
+
+          &::before {
+            background: var(--border-light);
+          }
+        }
+      }
     }
   }
 }

@@ -1,17 +1,7 @@
 /* eslint-disable import/extensions */
 import { createProductCard } from './_createElements.js';
-import productsData from './products.json' assert { type: 'json' };
-
-const productsByCategory = productsData.reduce((obj, product) => {
-  const { category } = product;
-
-  // eslint-disable-next-line no-prototype-builtins, no-param-reassign
-  if (!obj.hasOwnProperty(category)) obj[category] = [];
-
-  obj[category].push(product);
-
-  return obj;
-}, {});
+import handleModal from './_modal.js';
+import productsByCategory from './_products.js';
 
 const handleAddBtn = (action) => {
   const addBtn = document.querySelector('.menu__add-btn');
@@ -32,6 +22,8 @@ const renderProducts = (category = 'coffee') => {
     .map((product, index) => createProductCard(product, index));
 
   productsList.replaceChildren(...products);
+
+  productsList.addEventListener('click', handleModal);
 
   if (products.length > 4) {
     handleAddBtn('view');

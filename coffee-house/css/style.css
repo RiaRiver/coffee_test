@@ -6,7 +6,12 @@
   --text-dark: #403f3d;
   --text-light: #e1d4c9;
   --text-accent: #b0907a;
+  --backdrop: rgba(64, 63, 61, 0.8);
   --font: "Inter", sans-serif;
+}
+
+::backdrop {
+  --backdrop: rgba(64, 63, 61, 0.8);
 }
 
 /* Typography */
@@ -129,9 +134,11 @@ body {
 h1,
 h2,
 h3,
+h4,
 p,
 button,
-picture {
+picture,
+fieldset {
   padding: 0;
   margin: 0;
   background: none;
@@ -152,10 +159,8 @@ img {
   object-fit: cover;
 }
 
-@media (max-width: 768px) {
-  .no-scroll {
-    overflow: hidden;
-  }
+.no-scroll {
+  overflow: hidden;
 }
 
 .section {
@@ -222,6 +227,12 @@ img {
   text-align: center;
   background: var(--color-light);
   border-radius: 100px;
+}
+
+.link-btn--secondary {
+  padding: 9px;
+  background: none;
+  border: 1px solid var(--border-dark);
 }
 
 .section__title {

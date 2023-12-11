@@ -16,6 +16,12 @@
   }
 }
 
+@mixin size-mobile-modal {
+  @media (max-width: 739px) {
+    @content;
+  }
+}
+
 @mixin size-hide-elements {
   @media (max-width: 768px) {
     @content;
