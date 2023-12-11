@@ -209,7 +209,8 @@
 
           <button type="button"
                   class="slider__btn slider__prev-btn"
-                  aria-label="Previous slide">
+                  aria-label="Previous slide"
+                  data-direction="prev">
             <svg xmlns="http://www.w3.org/2000/svg"
                  class="icon arrow-icon"
                  width="24"
@@ -220,7 +221,8 @@
 
           <button type="button"
                   class="slider__btn slider__next-btn"
-                  aria-label="Next slide">
+                  aria-label="Next slide"
+                  data-direction="next">
             <svg xmlns="http://www.w3.org/2000/svg"
                  class="icon arrow-icon"
                  width="24"
@@ -229,8 +231,9 @@
             </svg>
           </button>
 
-          <ul class="list slider__pagination">
-            <li class="slider__pagination-bullet slider__pagination-bullet--active"></li>
+          <ul class="list pagination slider__pagination">
+            <li class="slider__pagination-bullet"
+                data-active></li>
             <!-- /.slider__pagination-bullet -->
             <li class="slider__pagination-bullet"></li>
             <!-- /.slider__pagination-bullet -->
