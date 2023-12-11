@@ -1,7 +1,6 @@
 /* eslint-disable import/extensions */
 import { createProductCard } from './_createElements.js';
 import handleModal from './_modal.js';
-import productsByCategory from './_products.js';
 
 const handleAddBtn = (action) => {
   const addBtn = document.querySelector('.menu__add-btn');
@@ -17,6 +16,7 @@ const handleAddBtn = (action) => {
 
 const renderProducts = (category = 'coffee') => {
   const productsList = document.querySelector('.menu__products');
+  const productsByCategory = globalThis.products_coffeeHouse;
 
   const products = productsByCategory[category]
     .map((product, index) => createProductCard(product, index));

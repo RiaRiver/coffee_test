@@ -1,6 +1,5 @@
 /* eslint-disable import/extensions */
 import { createModalElement } from './_createElements.js';
-import productsByCategory from './_products.js';
 import handleScroll from './_scroll.js';
 
 const calcPrice = (event) => {
@@ -32,6 +31,7 @@ const handleModal = (event) => {
 
   if (productCard) {
     const { category, index } = productCard.dataset;
+    const productsByCategory = globalThis.products_coffeeHouse;
     const product = productsByCategory[category][index];
     const modal = createModalElement(product, +index);
 
