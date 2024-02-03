@@ -1,0 +1,29 @@
+/* * {
+  box-sizing: border-box;
+} */
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+
+.btn_container {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+}
+
+.type_btn {
+  display: block;
+  width: 100%;
+}
+
+.dropdown {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}

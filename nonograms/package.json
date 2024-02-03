@@ -20,16 +20,18 @@
   },
   "homepage": "https://github.com/rolling-scopes-school/riariver-JSFE2023Q4#readme",
   "devDependencies": {
-    "vite": "^5.0.8",
     "eslint": "^8.56.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.29.1",
+    "sass": "^1.70.0",
     "stylelint": "^15.11.0",
     "stylelint-config-htmlacademy": "^2.0.1",
     "stylelint-config-recess-order": "^4.4.0",
     "stylelint-config-recommended-scss": "^13.1.0",
     "stylelint-config-standard-scss": "^11.1.0",
-    "stylelint-scss": "^5.3.1"
+    "stylelint-scss": "^5.3.1",
+    "vite": "^5.0.8",
+    "vite-plugin-inspect": "^0.8.3"
   }
 }
