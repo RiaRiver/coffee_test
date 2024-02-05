@@ -11,7 +11,7 @@ export class DropDownButton extends Element {
   }
 
   render(list) {
-    this.button = new Button(this.state, { class: 'dropdown-btn__btn' });
+    this.button = new Button(this.state, { class: 'dropdown-btn__btn btn' });
     this.list = new Element('ul', '', { class: 'dropdown-btn__list' });
 
     this.renderList(list);
@@ -19,14 +19,13 @@ export class DropDownButton extends Element {
   }
 
   renderList(list) {
-    console.log('renderList', list);
     this.items = list.map((item) => {
       const element = new Element('li', item, { class: 'dropdown-btn__item' });
       element.state = item;
 
       element.setListeners([{
         event: 'click',
-        handler: this.changeState.bind(this, element.state),
+        handler: this.changeState.bind(this, element.state, true),
       }]);
       return element;
     });
@@ -51,13 +50,13 @@ export class DropDownButton extends Element {
     }
   };
 
-  changeState = (state) => {
+  changeState = (state, isClick) => {
     this.state = state;
     this.button.setContent(state);
     this.list.element.classList.remove('dropdown-btn__list_open');
     this.list.open = false;
 
-    eventEmitter.emit(this.changeEvent);
+    eventEmitter.emit(this.changeEvent, isClick);
   };
 
   getState() {

@@ -59,7 +59,6 @@ export class Field extends Element {
    * Based on the current state, it toggles the state and emits the fieldChange event.
    */
   handleClick() {
-    console.log('on field click game state', store.getState('gameActive'));
     if (!this.cellActive) return;
     if (!store.getState('gameActive')) {
       eventEmitter.emit(EVENTS.gameStart);

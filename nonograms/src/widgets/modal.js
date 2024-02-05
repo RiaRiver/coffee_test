@@ -23,7 +23,7 @@ export class Modal extends Element {
     const modalContainer = new Element('div', '', { class: 'modal__container' });
     const title = new Element('h3', titleText, { class: 'modal__title' });
     this.modalContent = new Element('div', '', { class: 'modal__content' });
-    const closeBtn = new Button('Close', { class: 'modal__close' });
+    const closeBtn = new Button('Close', { class: 'modal__close btn' });
 
     this.setListeners([
       {

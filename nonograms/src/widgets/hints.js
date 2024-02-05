@@ -36,7 +36,8 @@ export class Hints extends Element {
    * @param {array} hints - The array of hints to create the block from.
    */
   createHintsBlock(hints) {
-    const size = Math.max(...hints.map((row) => row.length));
+    const maxSize = Math.max(...hints.map((row) => row.length));
+    const size = maxSize < 3 ? 3 : maxSize;
     let index = 0;
 
     hints.forEach((row) => {

@@ -1,6 +1,6 @@
 * {
   box-sizing: inherit;
-  --t1: 0.2s;
+  --t1: 0.05s;
   --t2: 0.5s;
   transition: color var(--t1), background-color var(--t2), border-color var(--t2), backdrop-filter var(--t2);
 }
@@ -24,16 +24,25 @@ ul {
 }
 
 .main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "control"
+    "select"
+    "game";
+  grid-template-columns: auto;
+  gap: 20px;
+  justify-content: center;
+  justify-items: center;
   width: 80%;
   max-width: 1440px;
+  padding: 20px 0;
   margin: auto;
 }
 
 .header {
   display: flex;
+  grid-area: header;
   gap: 20px;
   align-items: center;
 
@@ -50,24 +59,4 @@ ul {
       -1px  1px 0 var(--text-shadow),
       -1px  0   0 var(--text-shadow);
   }
-}
-
-
-.btn_container {
-  position: relative;
-  display: inline-block;
-  width: 100px;
-}
-
-.type_btn {
-  display: block;
-  width: 100%;
-}
-
-.dropdown {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
 }

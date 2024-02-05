@@ -58,6 +58,10 @@ class Store {
     return this.state;
   }
 
+  getStore(name) {
+    return this[name];
+  }
+
   /**
    * Resets the state by setting it to the initial state.
    *

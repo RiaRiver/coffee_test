@@ -1,0 +1,26 @@
+.modal {
+  padding: 0;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    color: var(--text-color);
+    background-color: var(--background-color);
+  }
+
+  &__table {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 10px;
+    justify-items: center;
+    margin: 8px 0;
+  }
+}
+
+.result {
+  position: relative;
+  display: contents;
+}
+

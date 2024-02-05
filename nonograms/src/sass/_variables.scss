@@ -9,6 +9,8 @@
   --fill-color: #487b65;
   --cross-color: #487b65;
   --filter: hue-rotate(-35deg) blur(4px);
+  --button-background: #d4f6e5;
+  --button-border-color: #264136;
 }
 
 [data-theme="dark"] {
@@ -22,4 +24,6 @@
   --fill-color: #76bb9b;
   --cross-color: #76bb9b;
   --filter: hue-rotate(-35deg) blur(4px) brightness(0.3);
+  --button-background: #264136;
+  --button-border-color: #d4f6e5;
 }

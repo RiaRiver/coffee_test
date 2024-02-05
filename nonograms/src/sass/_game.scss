@@ -1,11 +1,20 @@
 .game {
-  &__container {
-    display: grid;
-    grid-template-areas:
-      "timer topHints"
-      "leftHints field";
-    grid-template-columns: repeat(2, auto);
-    width: fit-content;
+
+  display: grid;
+  grid-area: game;
+  grid-template-areas:
+    "timer topHints"
+    "leftHints field";
+  grid-template-columns: repeat(2, auto);
+  width: fit-content;
+  user-select: none;
+
+  @include size-tablet {
+    font-size: 16px;
+  }
+
+  @include size-mobile {
+    font-size: 12px;
   }
 
   &__field {
@@ -59,6 +68,26 @@
   user-select: none;
   background-color: var(--field-color);
   border: 1px solid var(--cell-border-color);
+
+  @include size-tablet {
+    width: 30px;
+    height: 30px;
+  }
+
+  @include size-mobile {
+    width: 15px;
+    height: 15px;
+
+    .game_medium & {
+      width: 20px;
+      height: 20px;
+    }
+
+    .game_small & {
+      width: 30px;
+      height: 30px;
+    }
+  }
 
   &[data-view="fill"] {
     background: var(--fill-color);

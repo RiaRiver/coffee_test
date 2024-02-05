@@ -18,22 +18,24 @@ export class ModalResults extends Modal {
    *
    */
   updateContent() {
-    const headerRow = new ResultRow('results__header');
+    const headerRow = new ResultRow('results__header result');
 
     const results = storage.loadResults() || [];
+    results.sort((a, b) => a.time - b.time);
+
     if (!results.length) {
       const resultsText = new Text({ class: 'modal__text' });
       resultsText.setText('No results yet!');
       this.setContent([resultsText]);
     } else {
       this.resultRows = [];
-      const resultsTable = new Element('ul', '', { class: 'modal__table' });
+      const resultsTable = new Element('ul', '', { class: 'modal__table results' });
 
       const headerTexts = { name: 'Name', difficulty: 'Difficulty', time: 'Time' };
       headerRow.setRow(headerTexts);
       this.resultRows.push(headerRow);
       results.forEach((result) => {
-        const resultRow = new ResultRow('result__row');
+        const resultRow = new ResultRow('results__row result');
         resultRow.setRow(result);
         this.resultRows.push(resultRow);
       });

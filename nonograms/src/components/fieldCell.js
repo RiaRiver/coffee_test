@@ -8,7 +8,7 @@ export class FieldCell extends Cell {
    * @param {number} index - The index of the cell in field block
    */
   constructor(index) {
-    super('', { class: 'cell field__cell' });
+    super('', { class: 'cell field-cell' });
 
     this.type = 'field';
     this.index = index;

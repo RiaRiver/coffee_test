@@ -1,0 +1,17 @@
+@mixin size-tablet {
+  @media (max-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin size-mobile {
+  @media (max-width: 700px) {
+    @content;
+  }
+}
+
+@mixin hovered-devices {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}

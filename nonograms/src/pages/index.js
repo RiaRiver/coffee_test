@@ -1,5 +1,7 @@
 import { Element } from '../utils';
-import { DropDownButton, GameContainer, ModalResults } from '../widgets';
+import {
+  GameContainer, ModalResults, SelectMenu,
+} from '../widgets';
 import {
   nonogramService,
   storage,
@@ -11,8 +13,6 @@ import { ModalWin } from '../widgets/modalWin';
 import { saveResult, toggleTheme } from './helpers';
 
 export class MainPage extends Element {
-  nonogramList = nonogramService.getNonogramList();
-
   saveBtn;
 
   loadBtn;
@@ -24,23 +24,24 @@ export class MainPage extends Element {
   constructor() {
     super('main', '', { class: 'main' });
 
-    this.render();
+    store.nonogramList = nonogramService.getNonogramList();
 
+    this.render();
     eventEmitter.on(EVENTS.gameEnd, this.endGame);
     eventEmitter.on(EVENTS.gameReset, this.resetGame);
     eventEmitter.on(EVENTS.fieldChange, this.checkSolution);
-    eventEmitter.on(EVENTS.difficultyChange, this.renderNamesList);
   }
 
   render() {
     this.renderHeader();
     this.renderSelectMenu();
-    this.renderGameMenu();
+
+    store.setState('nonogram', nonogramService.getNonogram(this.getSelectedId()));
+    this.renderControlMenu();
 
     this.winModal = new ModalWin();
 
-    const nonogram = nonogramService.getNonogram();
-    store.setState('nonogram', nonogram);
+    const nonogram = store.getState('nonogram');
     this.gameContainer = new GameContainer(nonogram);
 
     this.mountComponents([this.gameContainer, this.winModal]);
@@ -49,7 +50,7 @@ export class MainPage extends Element {
   renderHeader() {
     const header = new Element('header', '', { class: 'header' });
     const title = new Element('h1', 'Nonograms', { class: 'header__title' });
-    const themeBtn = new Button('theme', { class: 'btn btn_theme' });
+    const themeBtn = new Button('Theme', { class: 'btn btn_theme' });
     const resultsBtn = new Button('Results', { class: 'btn results' });
     const resultsModal = new ModalResults();
 
@@ -67,22 +68,32 @@ export class MainPage extends Element {
   }
 
   renderSelectMenu() {
-    this.difficultyBtn = new DropDownButton(Object
-      .keys(this.nonogramList), EVENTS.difficultyChange);
-    const names = this.nonogramList[this.difficultyBtn.getState()].map((item) => item.name);
-    this.namesBtn = new DropDownButton(names);
+    this.selectMenu = new SelectMenu();
+    this.selectBtn = new Button('Select', { class: 'btn btn_select' });
+    const randomBtn = new Button('Random', { class: 'btn btn_random' });
 
-    this.mountComponents([this.difficultyBtn,
-      this.namesBtn]);
+    this.selectBtn.setListeners([{
+      event: 'click',
+      handler: (e) => {
+        this.startGame(e, this.getSelectedId());
+      },
+    }]);
+
+    randomBtn.setListeners([{
+      event: 'click',
+      handler: this.startGame,
+    }]);
+
+    this.selectMenu.mountComponents([this.selectBtn, randomBtn]);
+    this.mountComponents([this.selectMenu]);
   }
 
-  renderGameMenu() {
-    const gameMenu = new Element('div', '', { class: 'game__menu' });
+  renderControlMenu() {
+    const gameMenu = new Element('div', '', { class: 'control-menu' });
     const resetBtn = new Button('Reset', { class: 'btn btn_reset' });
     this.saveBtn = new Button('Save', { class: 'btn btn_save' });
     this.loadBtn = new Button('Load', { class: 'btn btn_load' });
     const solutionBtn = new Button('Solution', { class: 'btn btn_solution' });
-    const randomBtn = new Button('Random', { class: 'btn btn_random' });
 
     resetBtn.setListeners([{
       event: 'click', handler: () => { eventEmitter.emit(EVENTS.gameReset); },
@@ -106,17 +117,12 @@ export class MainPage extends Element {
       handler: this.showSolution,
     }]);
 
-    randomBtn.setListeners([{
-      event: 'click',
-      handler: this.startRandomGame,
-    }]);
-
     gameMenu.mountComponents([
-      resetBtn,
       this.saveBtn,
       this.loadBtn,
+      resetBtn,
       solutionBtn,
-      randomBtn]);
+    ]);
 
     this.mountComponents([gameMenu]);
   }
@@ -124,10 +130,7 @@ export class MainPage extends Element {
   resetGame = () => {
     store.setState('gameActive', false);
     this.saveBtn.setDisabled(false);
-    const { difficulty, name } = store.getState('nonogram');
-    this.difficultyBtn.changeState(difficulty);
-    this.namesBtn.renderList(this.nonogramList[difficulty].map((item) => item.name));
-    this.namesBtn.changeState(name);
+    this.selectMenu.updateSelects();
   };
 
   saveGame = () => {
@@ -140,22 +143,25 @@ export class MainPage extends Element {
     const nonogram = nonogramService.getNonogram(id);
     store.setState('nonogram', nonogram);
     eventEmitter.emit(EVENTS.gameReset);
+    this.selectMenu.updateSelects();
     this.gameContainer.render(nonogram);
     this.gameContainer.setState(gameState);
   };
 
   showSolution = () => {
     eventEmitter.emit(EVENTS.gameEnd);
+    this.selectMenu.updateSelects();
     const solution = nonogramService.getSolution(store.getState('nonogram').id);
     this.gameContainer.setState({ field: solution });
   };
 
-  startRandomGame = () => {
+  startGame = (_, id) => {
     this.saveBtn.setDisabled(false);
-    const nonogram = nonogramService.getRandomNonogram();
+    eventEmitter.emit(EVENTS.gameReset);
+    const nonogram = id ? nonogramService.getNonogram(id) : nonogramService.getRandomNonogram();
     store.resetState();
     store.setState('nonogram', nonogram);
-    eventEmitter.emit(EVENTS.gameReset);
+    this.selectMenu.updateSelects();
     this.gameContainer.render(nonogram);
   };
 
@@ -175,7 +181,9 @@ export class MainPage extends Element {
     store.setState('gameActive', false);
   };
 
-  renderNamesList = () => {
-    console.log('');
+  getSelectedId = () => {
+    const nonogramList = store.getStore('nonogramList');
+    const { difficulty, name } = this.selectMenu.getSelected();
+    return nonogramList[difficulty].find((item) => item.name === name).id;
   };
 }

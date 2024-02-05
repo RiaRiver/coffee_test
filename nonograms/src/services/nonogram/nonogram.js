@@ -17,14 +17,18 @@ class Nonogram {
     return nonogram;
   };
 
-  getNonogramList = () => this.nonograms.reduce((obj, item) => {
-    const {
-      difficulty, id, name,
-    } = item;
-    if (!obj[difficulty]) obj[difficulty] = [];
-    obj[difficulty].push({ id, name });
-    return obj;
-  }, {});
+  getNonogramList = () => {
+    const nonogramList = {};
+    this.nonograms.forEach((item) => {
+      const {
+        difficulty, id, name,
+      } = item;
+      if (!nonogramList[difficulty]) nonogramList[difficulty] = [];
+      nonogramList[difficulty].push({ id, name });
+    });
+
+    return nonogramList;
+  };
 
   getSolution = (id) => this.nonograms.find((item) => item.id === id).field.flat();
 

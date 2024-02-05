@@ -19,7 +19,7 @@ export class GameContainer extends Element {
    * @param {nonogram} nonogram - The nonogram object to generate the game
    */
   constructor(nonogram) {
-    super('section', '', { class: 'game__container' });
+    super('section', '', { class: 'game' });
 
     this.render(nonogram);
   }
@@ -35,6 +35,9 @@ export class GameContainer extends Element {
     this.horizontalHints = new Hints('horizontal', nonogram.horizontalHints);
     this.verticalHints = new Hints('vertical', nonogram.verticalHints);
 
+    if (nonogram.cols <= 5) this.element.classList.add('game_small');
+    else if (nonogram.cols <= 10) this.element.classList.add('game_medium');
+
     this.mountComponents([this.field, this.horizontalHints, this.verticalHints, this.timer], 'replaceChildren');
   }
 
@@ -45,7 +48,6 @@ export class GameContainer extends Element {
    * horizontalHints, and verticalHints properties.
    */
   setState = (state) => {
-    console.log('game container set state', state);
     this.field.setState(state.field);
 
     if (state.time !== undefined) this.timer.setState(state.time);

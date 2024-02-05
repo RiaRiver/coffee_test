@@ -11,7 +11,7 @@ export class HintCell extends Cell {
    * @return {HintCell} An instance of the HintCell class
    */
   constructor(type, index, textContent) {
-    super(textContent, { class: 'cell hint__cell' });
+    super(textContent, { class: 'cell hint-cell' });
 
     this.type = type;
     this.index = index;
