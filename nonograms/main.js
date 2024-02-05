@@ -1,4 +1,8 @@
 import './src/sass/style.scss';
 import { MainPage } from './src/pages';
+import { Element } from './src/utils';
 
-const root = document.getElementById('app').append(new MainPage().getElement());
+const app = new Element('div', '', { id: 'app' });
+app.getElement().append(new MainPage().getElement());
+
+document.body.append(app.getElement());

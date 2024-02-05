@@ -17,7 +17,6 @@ export class Element {
    * @param {string} tag - The tag of the element to create
    * @param {string} textContent - The text content to be added to the element
    * @param {object} props - The properties to be added to the element
-   * @return {void}
    */
   create(tag, textContent, props) {
     const element = document.createElement(tag);
@@ -44,7 +43,6 @@ export class Element {
    * Set the content of the element.
    *
    * @param {string} content - The content to set
-   * @return {void}
    */
   setContent(content) {
     this.element.textContent = content;
@@ -53,8 +51,7 @@ export class Element {
   /**
    * Set listeners for the given events and their corresponding handlers.
    *
-   * @param {Array} listeners - An array of objects containing event and handler properties.
-   * @return {void}
+   * @param {array} listeners - An array of objects containing event and handler properties.
    */
   setListeners(listeners) {
     listeners.forEach((listener) => {
@@ -65,9 +62,8 @@ export class Element {
   /**
    * Mounts components to the element using the specified method.
    *
-   * @param {Array} components - Array of components to mount
+   * @param {array} components - Array of components to mount
    * @param {string} [method='append'] - Method to use for mounting
-   * @return {void}
    */
   mountComponents(components, method = 'append') {
     this.element[method](...components.map((component) => component.getElement()));

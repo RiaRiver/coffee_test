@@ -1,0 +1,23 @@
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --link-color: #007bff;
+  --field-color: #aba9e4;
+  --hints-color: #aba9e4;
+  --cell-border-color: darkviolet;
+  --field-border-color: violet;
+  --fill-color: darkviolet;
+  --cross-color: darkviolet;
+}
+
+[data-theme="dark"] {
+  --background-color: darkviolet;
+  --text-color: #000000;
+  --link-color: #007bff;
+  --field-color: darkviolet;
+  --hints-color: darkviolet;
+  --cell-border-color: violet;
+  --field-border-color: violet;
+  --fill-color: violet;
+  --cross-color: violet;
+}

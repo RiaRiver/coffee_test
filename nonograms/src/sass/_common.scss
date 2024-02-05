@@ -1,6 +1,10 @@
 /* * {
   box-sizing: border-box;
 } */
+* {
+  --t: 0.5s;
+  transition: color var(--t), background var(--t), border-color var(--t);
+}
 
 ul {
   padding: 0;
