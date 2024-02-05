@@ -1,23 +1,25 @@
 :root {
-  --background-color: #ffffff;
-  --text-color: #000000;
-  --link-color: #007bff;
-  --field-color: #aba9e4;
-  --hints-color: #aba9e4;
-  --cell-border-color: darkviolet;
-  --field-border-color: violet;
-  --fill-color: darkviolet;
-  --cross-color: darkviolet;
+  --background-color: #94d8b7;
+  --text-color: #264136;
+  --text-shadow: #94d8b7;
+  --field-color: #76bb9b;
+  --hints-color: #76bb9b;
+  --cell-border-color: #487b65;
+  --field-border-color: #94d8b7;
+  --fill-color: #487b65;
+  --cross-color: #487b65;
+  --filter: hue-rotate(-35deg) blur(4px);
 }
 
 [data-theme="dark"] {
-  --background-color: darkviolet;
-  --text-color: #000000;
-  --link-color: #007bff;
-  --field-color: darkviolet;
-  --hints-color: darkviolet;
-  --cell-border-color: violet;
-  --field-border-color: violet;
-  --fill-color: violet;
-  --cross-color: violet;
+  --background-color: #22383a;
+  --text-color: #94d8b7;
+  --text-shadow: #264136;
+  --field-color: #264136;
+  --hints-color: #264136;
+  --cell-border-color: #76bb9b;
+  --field-border-color: #94d8b7;
+  --fill-color: #76bb9b;
+  --cross-color: #76bb9b;
+  --filter: hue-rotate(-35deg) blur(4px) brightness(0.3);
 }

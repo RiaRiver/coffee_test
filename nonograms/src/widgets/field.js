@@ -25,8 +25,8 @@ export class Field extends Element {
   render() {
     this.field.forEach((row) => {
       const cellsWrapper = new Element('ul', '', { class: 'cells-wrapper' });
-      row.forEach((cell) => cellsWrapper.getElement().append(cell.getElement()));
-      this.element.append(cellsWrapper.getElement());
+      row.forEach((cell) => cellsWrapper.mountComponents([cell]));
+      this.mountComponents([cellsWrapper]);
     });
   }
 
@@ -54,7 +54,8 @@ export class Field extends Element {
   }
 
   /**
-   * Handles the click event. If the cell is active, it checks if the game is active, and if not, emits the gameStart event.
+   * Handles the click event. If the cell is active, it checks if the game is active,
+   * and if not, emits the gameStart event.
    * Based on the current state, it toggles the state and emits the fieldChange event.
    */
   handleClick() {
@@ -62,6 +63,7 @@ export class Field extends Element {
     if (!this.cellActive) return;
     if (!store.getState('gameActive')) {
       eventEmitter.emit(EVENTS.gameStart);
+      store.setState('gameActive', true);
     }
     if (this.state === 1) {
       this.setState(0);
@@ -80,13 +82,6 @@ export class Field extends Element {
     if (this.state === 8) {
       this.setState(0);
     } else this.setState(8);
-  }
-
-  /**
-   * Reset all field cells to a default state.
-   */
-  reset() {
-    this.field.flat().forEach((fieldCell) => fieldCell.setState(0));
   }
 
   /**

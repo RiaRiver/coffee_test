@@ -1,4 +1,4 @@
-import { store } from '../store/store';
+import { store } from '../store';
 import { Cell } from './cell';
 
 export class HintCell extends Cell {

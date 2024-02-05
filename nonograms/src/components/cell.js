@@ -22,7 +22,7 @@ export class Cell extends Element {
 
     this.cellActive = true;
     eventEmitter.on(EVENTS.gameEnd, this.disableCell);
-    eventEmitter.on(EVENTS.gameReset, this.enableCell);
+    eventEmitter.on(EVENTS.gameReset, this.reset);
   }
 
   /**
@@ -50,10 +50,8 @@ export class Cell extends Element {
     this.cellActive = false;
   };
 
-  /**
-   * Enable the cell.
-   */
-  enableCell = () => {
+  reset = () => {
+    this.setState(0);
     this.cellActive = true;
   };
 }

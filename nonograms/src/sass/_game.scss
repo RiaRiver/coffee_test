@@ -49,13 +49,15 @@
 
 .cell {
   position: relative;
+
+  box-sizing: content-box;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 40px;
   height: 40px;
   user-select: none;
-  background: var(--field-color);
+  background-color: var(--field-color);
   border: 1px solid var(--cell-border-color);
 
   &[data-view="fill"] {
@@ -69,7 +71,7 @@
       width: 100%;
       height: 2px;
       content: "";
-      background: var(--cross-color);
+      background-color: var(--cross-color);
       transform: rotate(45deg);
     }
 

@@ -1,7 +1,7 @@
 import { storage } from '../services';
 import { Element } from '../utils';
 import { Modal } from './modal';
-import { ResultRow } from '../components';
+import { ResultRow, Text } from '../components';
 
 export class ModalResults extends Modal {
   /**
@@ -9,6 +9,7 @@ export class ModalResults extends Modal {
    */
   constructor() {
     super('Results');
+
     this.updateContent();
   }
 
@@ -17,22 +18,28 @@ export class ModalResults extends Modal {
    *
    */
   updateContent() {
-    this.resultRows = [];
-    const resultsTable = new Element('ul', '', { class: 'modal__table' });
     const headerRow = new ResultRow('results__header');
 
-    const headerTexts = { name: 'Name', difficulty: 'Difficulty', time: 'Time' };
-    headerRow.setRow(headerTexts);
-    this.resultRows.push(headerRow);
+    const results = storage.loadResults() || [];
+    if (!results.length) {
+      const resultsText = new Text({ class: 'modal__text' });
+      resultsText.setText('No results yet!');
+      this.setContent([resultsText]);
+    } else {
+      this.resultRows = [];
+      const resultsTable = new Element('ul', '', { class: 'modal__table' });
 
-    const results = storage.loadResults();
-    results.forEach((result) => {
-      const resultRow = new ResultRow('result__row');
-      resultRow.setRow(result);
-      this.resultRows.push(resultRow);
-    });
+      const headerTexts = { name: 'Name', difficulty: 'Difficulty', time: 'Time' };
+      headerRow.setRow(headerTexts);
+      this.resultRows.push(headerRow);
+      results.forEach((result) => {
+        const resultRow = new ResultRow('result__row');
+        resultRow.setRow(result);
+        this.resultRows.push(resultRow);
+      });
 
-    resultsTable.mountComponents([...this.resultRows]);
-    this.setContent([resultsTable]);
+      resultsTable.mountComponents([...this.resultRows]);
+      this.setContent([resultsTable]);
+    }
   }
 }

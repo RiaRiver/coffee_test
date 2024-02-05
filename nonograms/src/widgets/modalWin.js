@@ -8,6 +8,7 @@ export class ModalWin extends Modal {
    */
   constructor() {
     super('Great!');
+
     this.updateContent();
   }
 

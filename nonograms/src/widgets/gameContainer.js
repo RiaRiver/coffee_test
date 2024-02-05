@@ -4,13 +4,13 @@ import { Field } from './field';
 import { Hints } from './hints';
 
 export class GameContainer extends Element {
+  timer = new Timer();
+
   field;
 
   horizontalHints;
 
   verticalHints;
-
-  timer;
 
   /**
    * Constructor for creating a new instance of the class GameContainer.
@@ -19,9 +19,8 @@ export class GameContainer extends Element {
    * @param {nonogram} nonogram - The nonogram object to generate the game
    */
   constructor(nonogram) {
-    super('div', '', { class: 'game__container' });
+    super('section', '', { class: 'game__container' });
 
-    this.timer = new Timer();
     this.render(nonogram);
   }
 
@@ -36,24 +35,8 @@ export class GameContainer extends Element {
     this.horizontalHints = new Hints('horizontal', nonogram.horizontalHints);
     this.verticalHints = new Hints('vertical', nonogram.verticalHints);
 
-    this.element.replaceChildren(
-      this.field.getElement(),
-      this.horizontalHints.getElement(),
-      this.verticalHints.getElement(),
-      this.timer.getElement(),
-    );
+    this.mountComponents([this.field, this.horizontalHints, this.verticalHints, this.timer], 'replaceChildren');
   }
-
-  /**
-   * Reset the field, horizontal and vertical hints, and timer.
-   *
-   */
-  reset = () => {
-    this.field.reset();
-    this.horizontalHints.reset();
-    this.verticalHints.reset();
-    this.timer.reset();
-  };
 
   /**
    * Updates the state of the component based on the provided state object.
@@ -62,6 +45,7 @@ export class GameContainer extends Element {
    * horizontalHints, and verticalHints properties.
    */
   setState = (state) => {
+    console.log('game container set state', state);
     this.field.setState(state.field);
 
     if (state.time !== undefined) this.timer.setState(state.time);

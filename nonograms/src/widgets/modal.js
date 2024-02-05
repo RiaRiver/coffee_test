@@ -10,6 +10,7 @@ export class Modal extends Element {
    */
   constructor(titleText) {
     super('dialog', '', { class: 'modal' });
+
     this.render(titleText);
   }
 

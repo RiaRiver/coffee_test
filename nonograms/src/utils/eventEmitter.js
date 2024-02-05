@@ -3,16 +3,11 @@ export const EVENTS = {
   gameStart: 'gamestart',
   gameEnd: 'gameend',
   gameReset: 'gamereset',
+  difficultyChange: 'difficultychange',
 };
 
 class EventEmitter {
-  /**
-   * Constructor for creating an instance of the EventEmitter class.
-   * @return {EventEmitter} An instance of the EventEmitter class
-   */
-  constructor() {
-    this.events = {};
-  }
+  events = {};
 
   /**
    * Emits the specified event with the provided data.

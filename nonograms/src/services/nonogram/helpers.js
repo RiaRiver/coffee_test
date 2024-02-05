@@ -15,15 +15,16 @@ export const createField = (puzzle) => {
   const pattern = puzzle.scheme
     .split(',')
     .map((item) => item.trim())
-    .map((item) => Array(Number.parseInt(item)).fill(item.at(-1) === 'x' ? 1 : 0))
+    .map((item) => Array(Number.parseInt(item, 10)).fill(item.at(-1) === 'x' ? 1 : 0))
     .flat();
 
-  const field = pattern.reduce((matrix, item, ind) => {
+  const field = [];
+  pattern.forEach((item, ind) => {
     const row = Math.floor(ind / puzzle.rows);
-    if (!matrix[row]) matrix[row] = [];
-    matrix[row].push(item);
-    return matrix;
-  }, []);
+    if (!field[row]) field[row] = [];
+    field[row].push(item);
+    return field;
+  });
 
   return field;
 };
@@ -33,3 +34,17 @@ export const getHints = (field) => field.map((row) => row
   .split('0')
   .filter((arr) => arr.length)
   .map((arr) => arr.length));
+
+export const createNonogram = (puzzle) => {
+  const difficulty = `${puzzle.cols} x ${puzzle.rows}`;
+  const field = createField(puzzle);
+  const horizontalHints = getHints(field);
+  const verticalHints = getHints(transposeMatrix(field));
+
+  const nonogram = {
+    ...puzzle, difficulty, field, horizontalHints, verticalHints,
+  };
+  delete nonogram.scheme;
+
+  return nonogram;
+};

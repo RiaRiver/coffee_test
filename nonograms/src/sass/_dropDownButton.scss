@@ -1,0 +1,37 @@
+
+
+// .btn {
+//   display: block;
+//   width: 100%;
+// }
+
+.dropdown-btn {
+  position: relative;
+  width: 100px;
+
+  &__btn {
+    display: block;
+    width: 100%;
+  }
+
+  &__list {
+    position: absolute;
+    top: 100%;
+    z-index: 10;
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    list-style: none;
+    background-color: yellow;
+    opacity: 0;
+    transition: all 0.5s;
+    transform: scaleY(0%);
+    transform-origin: top;
+
+    &_open {
+      opacity: 1;
+      transform: scaleY(100%);
+    }
+  }
+}
+

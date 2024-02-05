@@ -4,6 +4,10 @@ import {
 } from '../utils';
 
 export class Timer extends Element {
+  startTime;
+
+  interval;
+
   /**
    * Constructor for creating an instance of the class Timer.
    *

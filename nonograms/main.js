@@ -3,6 +3,6 @@ import { MainPage } from './src/pages';
 import { Element } from './src/utils';
 
 const app = new Element('div', '', { id: 'app' });
-app.getElement().append(new MainPage().getElement());
+app.mountComponents([new MainPage()]);
 
 document.body.append(app.getElement());

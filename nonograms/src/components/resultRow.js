@@ -1,6 +1,12 @@
 import { Element } from '../utils';
 
 export class ResultRow extends Element {
+  name;
+
+  difficulty;
+
+  time;
+
   constructor(className) {
     super('li', '', { class: className });
 

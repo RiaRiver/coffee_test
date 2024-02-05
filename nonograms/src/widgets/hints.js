@@ -25,8 +25,8 @@ export class Hints extends Element {
   render() {
     this.hints.forEach((row) => {
       const hintsWrapper = new Element('ul', '', { class: 'cells-wrapper' });
-      row.forEach((cell) => hintsWrapper.getElement().append(cell.getElement()));
-      this.element.append(hintsWrapper.getElement());
+      row.forEach((cell) => hintsWrapper.mountComponents([cell]));
+      this.mountComponents([hintsWrapper]);
     });
   }
 
@@ -70,13 +70,6 @@ export class Hints extends Element {
     if (this.state === 8) {
       this.setState(0);
     } else this.setState(8);
-  }
-
-  /**
-   * Reset all hints cells to a default state.
-   */
-  reset() {
-    this.hints.flat().forEach((fieldCell) => fieldCell.setState(0));
   }
 
   /**
